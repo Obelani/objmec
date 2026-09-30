@@ -356,5 +356,97 @@ function toggleFaq(btn){const item=btn.closest('.faq-item');const aberto=item.cl
 <script>!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');fbq('init','843796278012844');fbq('track','PageView');</script>
 <noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=843796278012844&ev=PageView&noscript=1"/></noscript>
 <script src="https://cdn.utmify.com.br/scripts/utms/latest.js" data-utmify-prevent-xcod-sck data-utmify-prevent-subids async defer></script>
+<!-- EXIT-POPUP:START -->
+<style>
+.xp-ov{position:fixed;inset:0;z-index:10000;display:none;align-items:center;justify-content:center;padding:16px;background:rgba(0,0,0,.72);-webkit-backdrop-filter:blur(3px);backdrop-filter:blur(3px)}
+.xp-ov.xp-on{display:flex;animation:xp-fade .2s ease-out}
+.xp-box{position:relative;width:100%;max-width:440px;max-height:calc(100vh - 32px);overflow:auto;background:#ffffff;color:#111827;border:1px solid #E5E7EB;border-radius:18px;padding:30px 24px 22px;text-align:center;box-shadow:0 24px 70px rgba(0,0,0,.45);font-family:'Inter',system-ui,sans-serif;animation:xp-pop .25s ease-out}
+.xp-x{position:absolute;top:8px;right:10px;width:36px;height:36px;border:0;background:none;color:#6B7280;font-size:26px;line-height:1;cursor:pointer;border-radius:8px}
+.xp-x:hover{color:#111827}
+.xp-tag{display:inline-block;background:#16A34A;color:#ffffff;font-family:'Montserrat',system-ui,sans-serif;font-weight:800;font-size:11px;letter-spacing:1.2px;text-transform:uppercase;padding:5px 14px;border-radius:999px;margin-bottom:14px}
+.xp-tt{font-family:'Montserrat',system-ui,sans-serif;font-weight:900;font-size:clamp(22px,6vw,27px);line-height:1.15;margin:0 0 8px;color:#111827}
+.xp-sub{font-size:14.5px;line-height:1.45;color:#6B7280;margin:0 0 16px}
+.xp-list{list-style:none;margin:0 0 16px;padding:0;text-align:left;display:grid;gap:8px}
+.xp-list li{display:flex;align-items:center;gap:12px;padding:11px 14px;border:1px solid #16A34A;border-radius:12px;background:rgba(0,0,0,.03);font-weight:700;font-size:14.5px;color:#111827}
+.xp-list b{font-size:22px;line-height:1}
+.xp-list em{margin-left:auto;font-style:normal;font-size:10.5px;font-weight:800;letter-spacing:.6px;text-transform:uppercase;color:#111827;opacity:0.6;white-space:nowrap}
+.xp-price{font-size:14px;color:#6B7280;margin:0 0 14px}
+.xp-price strong{font-family:'Montserrat',system-ui,sans-serif;font-size:24px;font-weight:900;color:#111827;margin:0 2px}
+.xp-cta{display:block;background:#16A34A;color:#ffffff!important;font-family:'Montserrat',system-ui,sans-serif;font-weight:800;font-size:15px;line-height:1.25;padding:17px 18px;border-radius:12px;text-decoration:none;transition:background .15s,transform .15s}
+.xp-cta:hover{background:#138b3f;transform:translateY(-2px)}
+.xp-no{margin-top:12px;background:none;border:0;color:#6B7280;font-size:12.5px;text-decoration:underline;cursor:pointer}
+.xp-safe{margin:12px 0 0;font-size:11.5px;color:#6B7280}
+@keyframes xp-fade{from{opacity:0}to{opacity:1}}
+@keyframes xp-pop{from{opacity:0;transform:translateY(14px) scale(.97)}to{opacity:1;transform:none}}
+@media(max-width:380px){.xp-list li{font-size:13.5px;padding:10px 11px}.xp-list em{display:none}}
+@media(prefers-reduced-motion:reduce){.xp-ov.xp-on,.xp-box{animation:none}}
+</style>
+<div class="xp-ov" id="xp-ov" role="dialog" aria-modal="true" aria-labelledby="xp-tt" aria-hidden="true">
+  <div class="xp-box">
+    <button type="button" class="xp-x" id="xp-x" aria-label="Fechar">&times;</button>
+    <span class="xp-tag">🎁 Presente antes de você ir</span>
+    <h2 class="xp-tt" id="xp-tt">Espere! Leve mais 3 bônus de presente</h2>
+    <p class="xp-sub">Garanta o <strong>Pacote Completo</strong> agora e receba também, sem pagar nada a mais:</p>
+    <ul class="xp-list">
+      <li><b>🧮</b>Calculadora de Preços e Lucro<em>Grátis</em></li>
+      <li><b>👥</b>Controle de Clientes e Retornos<em>Grátis</em></li>
+      <li><b>📄</b>Gerador de Orçamentos<em>Grátis</em></li>
+    </ul>
+    <p class="xp-price">Pacote Completo + 3 bônus por apenas <strong>R$37,90</strong></p>
+    <a href="https://app.mivvo.io/checkout/p8otenwmrsh4axd" class="xp-cta" id="xp-cta">SIM! QUERO O PACOTE COMPLETO + OS 3 BÔNUS</a>
+    <button type="button" class="xp-no" id="xp-no">Não, obrigado</button>
+    <p class="xp-safe">✅ Compra 100% segura &nbsp;•&nbsp; 7 dias de garantia</p>
+  </div>
+</div>
+<script>
+(function(){
+  var ov=document.getElementById('xp-ov'); if(!ov) return;
+  var KEY='xp_exit_shown', armed=false, shown=false, lastFocus=null;
+  try{ if(sessionStorage.getItem(KEY)) shown=true; }catch(e){}
+  var touch=('ontouchstart' in window)||navigator.maxTouchPoints>0;
+
+  function open(){
+    if(shown) return; shown=true;
+    try{ sessionStorage.setItem(KEY,'1'); }catch(e){}
+    lastFocus=document.activeElement;
+    ov.classList.add('xp-on'); ov.setAttribute('aria-hidden','false');
+    document.documentElement.style.overflow='hidden';
+    var b=document.getElementById('xp-cta'); if(b) b.focus({preventScroll:true});
+  }
+  function close(){
+    ov.classList.remove('xp-on'); ov.setAttribute('aria-hidden','true');
+    document.documentElement.style.overflow='';
+    if(lastFocus&&lastFocus.focus) try{lastFocus.focus({preventScroll:true});}catch(e){}
+  }
+  ov.addEventListener('click',function(e){ if(e.target===ov) close(); });
+  document.getElementById('xp-x').addEventListener('click',close);
+  document.getElementById('xp-no').addEventListener('click',close);
+  document.addEventListener('keydown',function(e){ if(e.key==='Escape'&&ov.classList.contains('xp-on')) close(); });
+  // quem ja clicou em qualquer botao de compra nao recebe o popup
+  document.addEventListener('click',function(e){
+    var a=e.target.closest&&e.target.closest('a[href*="/checkout/"]');
+    if(a) shown=true;
+  },true);
+
+  // libera o gatilho depois de 8s na pagina (evita disparar logo na chegada)
+  setTimeout(function(){
+    armed=true;
+    if(touch&&!shown){
+      // celular: nao existe "mouse saindo da pagina"; usamos o botao Voltar (1 vez so)
+      try{
+        history.pushState({xp:1},'',location.href);
+        window.addEventListener('popstate',function(){
+          if(!shown) open();
+        });
+      }catch(e){}
+    }
+  },8000);
+  // desktop: mouse saindo pela parte de cima da janela (rumo a aba/fechar)
+  document.addEventListener('mouseout',function(e){
+    if(armed&&!touch&&!e.relatedTarget&&e.clientY<=0) open();
+  });
+})();
+</script>
+<!-- EXIT-POPUP:END -->
 </body>
 </html>
