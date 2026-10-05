@@ -137,7 +137,41 @@ footer{border-top:1px solid var(--borda);padding:24px 20px;text-align:center;col
 footer a{color:var(--vermelho);text-decoration:underline}
 .text-center{text-align:center}.mt-32{margin-top:32px}.mt-24{margin-top:24px}
 @media(max-width:640px){.secao{padding:48px 16px}.hero{padding:44px 16px 0}.mapa-card h3{font-size:15.6px}.mapa-card p{font-size:14.4px}.mapa-card .letra{font-size:24px}.como-funciona-img{max-width:100%;border-radius:8px}.bonus-grid{grid-template-columns:1fr;gap:16px}}
+
+/* planos: Basico + Completo (igual aos demais nichos) */
+.planos-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.plano{background:var(--branco);border:1px solid var(--borda);border-radius:14px;padding:32px 24px;display:flex;flex-direction:column;gap:20px;position:relative;text-align:center;box-shadow:0 2px 12px rgba(0,0,0,0.06)}
+.plano.destaque{border:2px solid var(--vermelho);box-shadow:0 4px 24px rgba(220,38,38,0.15)}
+.plano-badge{position:absolute;top:-14px;left:50%;transform:translateX(-50%);background:var(--vermelho);color:var(--branco);font-family:'Montserrat',sans-serif;font-weight:800;font-size:11px;letter-spacing:1px;text-transform:uppercase;padding:4px 18px;border-radius:999px;white-space:nowrap}
+.plano-header h3{font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:var(--cinza-texto);margin-bottom:16px}
+.plano .plano-preco-box{background:var(--vermelho-claro);border:1px solid var(--vermelho-medio);border-radius:10px;padding:16px;margin-bottom:0;display:flex;flex-direction:column;align-items:center;gap:4px}
+.plano .plano-de{font-size:13px;color:var(--cinza-texto);text-decoration:line-through;margin-bottom:0}
+.plano .plano-valor{font-family:'Montserrat',sans-serif;font-weight:900;font-size:48px;color:var(--vermelho);line-height:1}
+.plano .plano-tipo{font-size:12px;color:var(--cinza-texto);margin-top:2px}
+.plano ul{list-style:none;display:flex;flex-direction:column;gap:10px;flex:1;text-align:left}
+.plano ul li{display:flex;align-items:flex-start;gap:10px;font-size:13px;color:var(--preto);line-height:1.4}
+.plano .p-check{flex-shrink:0;width:18px;height:18px;background:var(--vermelho);border-radius:50%;display:flex;align-items:center;justify-content:center;margin-top:1px}
+.plano .p-check svg{width:9px;height:9px}
+.plano ul li.bonus-item{color:var(--vermelho);font-weight:600}
+.plano ul li.bonus-item .p-check{background:var(--preto)}
+.plano .plano-rodape{font-size:11px;color:var(--cinza-texto);text-align:center;margin-top:0}
+.plano .super-oferta-wrap{text-align:center;margin-bottom:16px}
+.plano .super-oferta-wrap img{max-width:280px;margin:0 auto}
+.selo-seguranca{display:flex;align-items:center;justify-content:center;gap:8px;flex-wrap:wrap;margin-top:12px}
+.selo-seguranca span{display:inline-flex;align-items:center;gap:4px;background:var(--vermelho-claro);padding:5px 12px;border-radius:999px;font-weight:700;color:var(--vermelho-hover);font-size:11.5px}
+@media(max-width:620px){.planos-grid{grid-template-columns:1fr}}
 </style>
+<!-- Kirvano: repassa os parametros da URL (UTM) para os links de checkout -->
+<script>
+window.addEventListener('load',function(){
+  var qs=document.location.search.replace('?','');
+  if(!qs) return;
+  document.querySelectorAll('a[href*="kirvano"]').forEach(function(a){
+    var h=a.href; if(h.indexOf(qs)>-1) return;
+    a.href=h+(h.indexOf('?')>-1?'&':'?')+qs;
+  });
+});
+</script>
 </head>
 <body>
 
@@ -168,6 +202,7 @@ footer a{color:var(--vermelho);text-decoration:underline}
     <p class="secao-sub">Conteúdo criado para educar o cliente e mostrar autoridade da sua oficina todos os dias</p>
     <ul class="lista-itens">
       <li><span class="check-icon"><svg viewBox="0 0 10 8" fill="none"><path d="M1 3.5L3.5 6.5L9 1" stroke="white" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>🎥 +50 Vídeos de Objetos Falantes para Oficinas Mecânicas</li>
+      <li><span class="check-icon"><svg viewBox="0 0 10 8" fill="none"><path d="M1 3.5L3.5 6.5L9 1" stroke="white" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>+100 Posts editáveis para usar hoje</li>
       <li><span class="check-icon"><svg viewBox="0 0 10 8" fill="none"><path d="M1 3.5L3.5 6.5L9 1" stroke="white" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>🔧 Chave de boca dizendo que está sempre pronta para apertar e soltar qualquer problema</li>
       <li><span class="check-icon"><svg viewBox="0 0 10 8" fill="none"><path d="M1 3.5L3.5 6.5L9 1" stroke="white" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>🔩 Parafuso reclamando que, quando fica frouxo, o carro começa a fazer barulho</li>
       <li><span class="check-icon"><svg viewBox="0 0 10 8" fill="none"><path d="M1 3.5L3.5 6.5L9 1" stroke="white" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>🔋 Bateria dizendo que sem energia o carro não vai a lugar nenhum</li>
@@ -195,7 +230,7 @@ footer a{color:var(--vermelho);text-decoration:underline}
     <p class="secao-sub">Você não precisa investir caro para começar a ver resultado</p>
     <div style="background:var(--vermelho-claro);border:1px solid var(--vermelho-medio);border-radius:10px;padding:20px 24px;text-align:center;"><p style="font-family:'Montserrat',sans-serif;font-weight:800;font-size:clamp(13px,2vw,17px);color:var(--vermelho);">M.A.P.A. = Micro investimento + Ação + Prova + Acesso imediato</p></div>
     <div class="mapa-grid">
-      <div class="mapa-card"><div class="mapa-icon"><img src="icon1.webp" alt="M"></div><div class="letra">M</div><h3>Micro investimento</h3><p>Menos que uma revisão — por apenas R$37,90</p></div>
+      <div class="mapa-card"><div class="mapa-icon"><img src="icon1.webp" alt="M"></div><div class="letra">M</div><h3>Micro investimento</h3><p>Mais barato que um lanche — a partir de R$10</p></div>
       <div class="mapa-card"><div class="mapa-icon"><img src="icon2.webp" alt="A"></div><div class="letra">A</div><h3>Ação imediata</h3><p>Comprou, já posta hoje mesmo</p></div>
       <div class="mapa-card"><div class="mapa-icon"><img src="icon3.webp" alt="P"></div><div class="letra">P</div><h3>Prova rápida</h3><p>Postou hoje, já sente a diferença</p></div>
       <div class="mapa-card"><div class="mapa-icon"><img src="icon4.webp" alt="A"></div><div class="letra">A</div><h3>Acesso imediato</h3><p>Sem espera, sem burocracia</p></div>
@@ -267,30 +302,38 @@ footer a{color:var(--vermelho);text-decoration:underline}
   <div class="container">
     <div class="alerta-promo"><p>⚠️ Promoção válida somente hoje — <span id="data-promo"></span>. Depois o preço volta ao normal.</p></div>
     <script>const _dp=new Date();const _mp=["Janeiro","Fevereiro","Março","Abril","Maio","Junho","Julho","Agosto","Setembro","Outubro","Novembro","Dezembro"];const _di=["Domingo","Segunda","Terça","Quarta","Quinta","Sexta","Sábado"];document.getElementById('data-promo').textContent=_dp.getDate()+' de '+_mp[_dp.getMonth()]+', '+_di[_dp.getDay()];</script>
-    <h2 class="secao-titulo">Garanta Agora o Seu <span class="destaque">Pacote</span></h2>
-    <p class="secao-sub">Um único pacote completo com tudo que sua oficina precisa para dominar as redes</p>
-    <div class="plano-unico">
-      <span class="plano-unico-badge">⭐ PACOTE COMPLETO — OFERTA ESPECIAL</span>
-      <img src="super_oferta.png" alt="Super Oferta" loading="lazy" class="super-img">
-      <h3>Tudo Que Você Precisa Para Bombar</h3>
-      <div class="plano-preco-box">
-        <p class="plano-de">De R$97,00</p>
-        <p class="plano-valor"><sup>R$</sup>37,90</p>
-        <p class="plano-tipo">Pagamento único — acesso imediato</p>
+    <h2 class="secao-titulo">Escolha o Melhor <span class="destaque">Plano</span> Para Você</h2>
+    <p class="secao-sub">Conquiste mais clientes hoje mesmo</p>
+    <div class="planos-grid">
+      <div class="plano">
+        <div class="plano-header"><h3>Plano Básico</h3><div class="plano-preco-box"><p class="plano-de">De R$67,00</p><p class="plano-valor">R$10</p><p class="plano-tipo">Pagamento único</p></div></div>
+        <ul>
+          <li><span class="p-check"><svg viewBox="0 0 10 8" fill="none"><path d="M1 3.5L3.5 6.5L9 1" stroke="white" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>5 Vídeos Objetos Falantes</li>
+          <li><span class="p-check"><svg viewBox="0 0 10 8" fill="none"><path d="M1 3.5L3.5 6.5L9 1" stroke="white" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>10 Posts</li>
+          <li><span class="p-check"><svg viewBox="0 0 10 8" fill="none"><path d="M1 3.5L3.5 6.5L9 1" stroke="white" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>5 Stories</li>
+          <li><span class="p-check"><svg viewBox="0 0 10 8" fill="none"><path d="M1 3.5L3.5 6.5L9 1" stroke="white" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>10 Legendas</li>
+        </ul>
+        <a href="upsell.html" class="btn-cta" style="max-width:100%;">QUERO ESSA OPÇÃO</a>
       </div>
-      <ul class="plano-ul">
-        <li><span class="p-check"><svg viewBox="0 0 10 8" fill="none"><path d="M1 3.5L3.5 6.5L9 1" stroke="white" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>🎥 +50 Vídeos de Objetos Falantes para Oficinas</li>
-        <li><span class="p-check"><svg viewBox="0 0 10 8" fill="none"><path d="M1 3.5L3.5 6.5L9 1" stroke="white" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Destaques para Bio no Instagram</li>
-        <li><span class="p-check"><svg viewBox="0 0 10 8" fill="none"><path d="M1 3.5L3.5 6.5L9 1" stroke="white" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Acesso imediato por email e WhatsApp</li>
-        <li class="bonus-item"><span class="p-check"><svg viewBox="0 0 10 8" fill="none"><path d="M1 3.5L3.5 6.5L9 1" stroke="white" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>🎁 Bônus 1: Painel de Gestão Inteligente</li>
-        <li class="bonus-item"><span class="p-check"><svg viewBox="0 0 10 8" fill="none"><path d="M1 3.5L3.5 6.5L9 1" stroke="white" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>🎁 Bônus 2: Método Posts que Atrai Clientes</li>
-        <li class="bonus-item"><span class="p-check"><svg viewBox="0 0 10 8" fill="none"><path d="M1 3.5L3.5 6.5L9 1" stroke="white" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>🎁 Bônus 3: Fórmula Instagram que Vende</li>
-        <li class="bonus-item"><span class="p-check"><svg viewBox="0 0 10 8" fill="none"><path d="M1 3.5L3.5 6.5L9 1" stroke="white" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>🎁 Bônus 4: Protocolo de Atendimento</li>
-        <li class="bonus-item"><span class="p-check"><svg viewBox="0 0 10 8" fill="none"><path d="M1 3.5L3.5 6.5L9 1" stroke="white" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>🎁 Bônus 5: Biblioteca de Respostas WhatsApp</li>
-        <li class="bonus-item"><span class="p-check"><svg viewBox="0 0 10 8" fill="none"><path d="M1 3.5L3.5 6.5L9 1" stroke="white" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>🎁 Bônus 6: Sistema de Controle de Clientes</li>
-      </ul>
-      <a href="https://app.mivvo.io/checkout/p8otenwmrsh4axd" class="btn-cta" style="max-width:100%;">✅ SIM! QUERO ESSE PACOTE POR R$37,90</a>
-      <p class="plano-rodape">Você não vai encontrar esse preço depois</p>
+      <div class="plano destaque">
+        <span class="plano-badge">⭐ SUPER OFERTA</span>
+        <div class="super-oferta-wrap"><img src="super_oferta.png" alt="Super Oferta" loading="lazy"></div>
+        <div class="plano-header"><h3>Pacote Completo</h3><div class="plano-preco-box"><p class="plano-valor">R$27,90</p><p class="plano-tipo">Pagamento único — acesso imediato</p></div></div>
+        <ul>
+          <li><span class="p-check"><svg viewBox="0 0 10 8" fill="none"><path d="M1 3.5L3.5 6.5L9 1" stroke="white" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>🎥 +50 Vídeos de Objetos Falantes</li>
+          <li><span class="p-check"><svg viewBox="0 0 10 8" fill="none"><path d="M1 3.5L3.5 6.5L9 1" stroke="white" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>+100 Posts editáveis</li>
+          <li><span class="p-check"><svg viewBox="0 0 10 8" fill="none"><path d="M1 3.5L3.5 6.5L9 1" stroke="white" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Destaques para Bio no Instagram</li>
+          <li class="bonus-item"><span class="p-check"><svg viewBox="0 0 10 8" fill="none"><path d="M1 3.5L3.5 6.5L9 1" stroke="white" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>🎁 Bônus 1: Painel de Gestão Inteligente</li>
+          <li class="bonus-item"><span class="p-check"><svg viewBox="0 0 10 8" fill="none"><path d="M1 3.5L3.5 6.5L9 1" stroke="white" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>🎁 Bônus 2: Método Posts que Atrai Clientes</li>
+          <li class="bonus-item"><span class="p-check"><svg viewBox="0 0 10 8" fill="none"><path d="M1 3.5L3.5 6.5L9 1" stroke="white" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>🎁 Bônus 3: Fórmula Instagram que Vende</li>
+          <li class="bonus-item"><span class="p-check"><svg viewBox="0 0 10 8" fill="none"><path d="M1 3.5L3.5 6.5L9 1" stroke="white" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>🎁 Bônus 4: Protocolo de Atendimento</li>
+          <li class="bonus-item"><span class="p-check"><svg viewBox="0 0 10 8" fill="none"><path d="M1 3.5L3.5 6.5L9 1" stroke="white" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>🎁 Bônus 5: Biblioteca de Respostas WhatsApp</li>
+          <li class="bonus-item"><span class="p-check"><svg viewBox="0 0 10 8" fill="none"><path d="M1 3.5L3.5 6.5L9 1" stroke="white" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>🎁 Bônus 6: Sistema de Controle de Clientes</li>
+        </ul>
+        <a href="https://pay.kirvano.com/a838971a-7c4d-4812-bb9a-71a7b42068a3" class="btn-cta" style="max-width:100%;">SIM! QUERO ESSA SUPER OFERTA!</a>
+        <div class="selo-seguranca"><span>✅ Compra 100% segura</span><span>⚡ Receba em menos de 2 minutos</span><span>✅ Pix seguro</span></div>
+        <p class="plano-rodape">Você não vai encontrar esse preço depois</p>
+      </div>
     </div>
   </div>
 </section>
@@ -327,6 +370,7 @@ footer a{color:var(--vermelho);text-decoration:underline}
       <div class="faq-item"><button class="faq-pergunta" onclick="toggleFaq(this)">Os vídeos funcionam para qualquer cidade?<span class="faq-icone">+</span></button><div class="faq-resposta">Sim! Os objetos falantes não citam localização, então funcionam para qualquer cidade do Brasil. O algoritmo das redes entrega para pessoas da sua região automaticamente.</div></div>
       <div class="faq-item"><button class="faq-pergunta" onclick="toggleFaq(this)">E se eu não gostar? Tem garantia?<span class="faq-icone">+</span></button><div class="faq-resposta">Sim! Você tem 7 dias de garantia incondicional. Se por qualquer motivo não ficar satisfeito, basta enviar um email e devolvemos 100% do seu dinheiro. Sem burocracia.</div></div>
       <div class="faq-item"><button class="faq-pergunta" onclick="toggleFaq(this)">Os vídeos funcionam no TikTok, Instagram e WhatsApp?<span class="faq-icone">+</span></button><div class="faq-resposta">Sim! Todo o conteúdo está no formato ideal para Instagram Reels, TikTok, Facebook e WhatsApp Status. Um pacote para todas as suas redes.</div></div>
+      <div class="faq-item"><button class="faq-pergunta" onclick="toggleFaq(this)">Qual a diferença entre o Plano Básico e o Pacote Completo?<span class="faq-icone">+</span></button><div class="faq-resposta">O Plano Básico inclui 5 vídeos, 10 posts, 5 stories e 10 legendas — ideal para testar. O Pacote Completo tem +50 vídeos, +100 posts e todos os 6 bônus exclusivos, que sozinhos valeriam R$366.</div></div>
     </div>
     <div class="text-center mt-32"><a href="#planos" class="btn-cta">👉 QUERO GARANTIR MEU PACOTE AGORA</a></div>
   </div>
@@ -351,15 +395,15 @@ function toggleFaq(btn){const item=btn.closest('.faq-item');const aberto=item.cl
 .xp-box{position:relative;width:100%;max-width:440px;max-height:calc(100vh - 32px);overflow:auto;background:#ffffff;color:#111827;border:1px solid #E5E7EB;border-radius:18px;padding:30px 24px 22px;text-align:center;box-shadow:0 24px 70px rgba(0,0,0,.45);font-family:'Inter',system-ui,sans-serif;animation:xp-pop .25s ease-out}
 .xp-x{position:absolute;top:8px;right:10px;width:36px;height:36px;border:0;background:none;color:#6B7280;font-size:26px;line-height:1;cursor:pointer;border-radius:8px}
 .xp-x:hover{color:#111827}
-.xp-tag{display:inline-block;background:#16A34A;color:#ffffff;font-family:'Montserrat',system-ui,sans-serif;font-weight:800;font-size:11px;letter-spacing:1.2px;text-transform:uppercase;padding:5px 14px;border-radius:999px;margin-bottom:14px}
+.xp-tag{display:inline-block;background:#DC2626;color:#ffffff;font-family:'Montserrat',system-ui,sans-serif;font-weight:800;font-size:11px;letter-spacing:1.2px;text-transform:uppercase;padding:5px 14px;border-radius:999px;margin-bottom:14px}
 .xp-tt{font-family:'Montserrat',system-ui,sans-serif;font-weight:900;font-size:clamp(22px,6vw,27px);line-height:1.15;margin:0 0 8px;color:#111827}
 .xp-sub{font-size:14.5px;line-height:1.45;color:#6B7280;margin:0 0 16px}
 .xp-list{list-style:none;margin:0 0 16px;padding:0;text-align:left;display:grid;gap:8px}
-.xp-list li{display:flex;align-items:center;gap:12px;padding:11px 14px;border:1px solid #16A34A;border-radius:12px;background:rgba(0,0,0,.03);font-weight:700;font-size:14.5px;color:#111827}
+.xp-list li{display:flex;align-items:center;gap:12px;padding:11px 14px;border:1px solid #DC2626;border-radius:12px;background:rgba(0,0,0,.03);font-weight:700;font-size:14.5px;color:#111827}
 .xp-list b{font-size:22px;line-height:1}
 .xp-list em{margin-left:auto;font-style:normal;font-size:10.5px;font-weight:800;letter-spacing:.6px;text-transform:uppercase;color:#111827;opacity:0.6;white-space:nowrap}
-.xp-cta{display:block;background:#16A34A;color:#ffffff!important;font-family:'Montserrat',system-ui,sans-serif;font-weight:800;font-size:15px;line-height:1.25;padding:17px 18px;border-radius:12px;text-decoration:none;transition:background .15s,transform .15s}
-.xp-cta:hover{background:#138b3f;transform:translateY(-2px)}
+.xp-cta{display:block;background:#DC2626;color:#ffffff!important;font-family:'Montserrat',system-ui,sans-serif;font-weight:800;font-size:15px;line-height:1.25;padding:17px 18px;border-radius:12px;text-decoration:none;transition:background .15s,transform .15s}
+.xp-cta:hover{background:#bb2020;transform:translateY(-2px)}
 .xp-no{margin-top:12px;background:none;border:0;color:#6B7280;font-size:12.5px;text-decoration:underline;cursor:pointer}
 .xp-safe{margin:12px 0 0;font-size:11.5px;color:#6B7280}
 @keyframes xp-fade{from{opacity:0}to{opacity:1}}
@@ -378,7 +422,7 @@ function toggleFaq(btn){const item=btn.closest('.faq-item');const aberto=item.cl
       <li><b>👥</b>Controle de Clientes e Retornos<em>Grátis</em></li>
       <li><b>📄</b>Gerador de Orçamentos<em>Grátis</em></li>
     </ul>
-    <a href="https://app.mivvo.io/checkout/p8otenwmrsh4axd" class="xp-cta" id="xp-cta">SIM! QUERO O PACOTE COMPLETO + OS 3 BÔNUS</a>
+    <a href="https://pay.kirvano.com/a838971a-7c4d-4812-bb9a-71a7b42068a3" class="xp-cta" id="xp-cta">SIM! QUERO O PACOTE COMPLETO + OS 3 BÔNUS</a>
     <button type="button" class="xp-no" id="xp-no">Não, obrigado</button>
     <p class="xp-safe">✅ Compra 100% segura &nbsp;•&nbsp; 7 dias de garantia</p>
   </div>
@@ -409,7 +453,7 @@ function toggleFaq(btn){const item=btn.closest('.faq-item');const aberto=item.cl
   document.addEventListener('keydown',function(e){ if(e.key==='Escape'&&ov.classList.contains('xp-on')) close(); });
   // quem ja clicou em qualquer botao de compra nao recebe o popup
   document.addEventListener('click',function(e){
-    var a=e.target.closest&&e.target.closest('a[href*="/checkout/"]');
+    var a=e.target.closest&&e.target.closest('a[href*="/checkout/"],a[href*="kirvano.com"]');
     if(a) shown=true;
   },true);
 
