@@ -10,148 +10,171 @@
 <meta property="og:type" content="website">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800;900&family=Inter:wght@400;500;600&display=swap" onload="this.onload=null;this.rel='stylesheet'">
-<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800;900&family=Inter:wght@400;500;600&display=swap"></noscript>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 :root{
-  --vermelho:#DC2626;--vermelho-hover:#B91C1C;--vermelho-claro:#FEF2F2;--vermelho-medio:#FEE2E2;
-  --preto:#111827;--cinza-texto:#6B7280;--cinza-fundo:#F9FAFB;
-  --branco:#FFFFFF;--verde:#16A34A;--verde-claro:#DCFCE7;
-  --amarelo-pill:#FEF9C3;--amarelo-pill-texto:#854D0E;
-  --borda:#E5E7EB;--vermelho-escuro:#7F1D1D;
+  --ink:#0B1C2C;--ink-2:#132536;--amber:#F59E0B;--amber-deep:#D97706;--amber-soft:#FEF3C7;
+  --stone:#F5F1EB;--paper:#FFFcf8;--muted:#6B7280;--line:#E7E0D5;--ok:#15803D;--ok-soft:#DCFCE7;--white:#fff;
 }
 html{scroll-behavior:smooth}
-body{font-family:'Inter',sans-serif;background:var(--branco);color:var(--preto);line-height:1.6;overflow-x:hidden}
-h1,h2,h3,h4{font-family:'Montserrat',sans-serif;line-height:1.15}
+body{font-family:'Plus Jakarta Sans',system-ui,sans-serif;background:var(--stone);color:var(--ink);line-height:1.6;overflow-x:hidden}
+h1,h2,h3,h4{font-family:'Barlow Condensed',sans-serif;line-height:1.05;letter-spacing:.02em;text-transform:uppercase}
 img{max-width:100%;height:auto;display:block}
 a{text-decoration:none;color:inherit}
-.container{max-width:860px;margin:0 auto;padding:0 20px}
-.urgencia{background:var(--vermelho);padding:12px 20px;text-align:center;font-family:'Montserrat',sans-serif;font-weight:700;font-size:clamp(12px,2.5vw,14px);position:sticky;top:0;z-index:100;color:var(--branco)}
-.urgencia .data-destaque{background:var(--branco);color:var(--vermelho);padding:2px 10px;border-radius:4px;display:inline-block;margin:0 4px;font-weight:800}
-.hero{padding:56px 20px 40px;text-align:center;background:var(--branco);border-bottom:1px solid var(--borda)}
-.nicho-badge{display:inline-block;background:var(--vermelho);color:var(--branco);font-family:'Montserrat',sans-serif;font-weight:800;font-size:11px;letter-spacing:1.5px;text-transform:uppercase;padding:5px 18px;border-radius:999px;margin-bottom:20px}
-.hero-pretitulo{font-family:'Montserrat',sans-serif;font-weight:700;font-size:clamp(13px,2.2vw,15px);color:var(--vermelho);margin-bottom:14px}
-.hero h1{font-size:clamp(24px,4.6vw,40px);font-weight:900;max-width:760px;margin:0 auto 16px;color:var(--preto)}
-.hero h1 .destaque{color:var(--vermelho)}
-.hero .subtitulo{font-size:clamp(14px,2vw,17px);color:var(--cinza-texto);max-width:640px;margin:0 auto 28px;line-height:1.65}
-.hero-banner{width:100%;max-width:608px;margin:0 auto 24px}
-.hero-banner img{width:100%;border-radius:12px;border:1px solid var(--borda);display:block}
-.btn-cta{display:inline-block;background:var(--vermelho);color:var(--branco);font-family:'Montserrat',sans-serif;font-weight:800;font-size:clamp(13px,2vw,16px);padding:18px 36px;border-radius:8px;letter-spacing:0.4px;transition:background 0.15s,transform 0.15s;cursor:pointer;border:none;text-align:center;width:100%;max-width:480px}
-.btn-cta:hover{background:var(--vermelho-hover);transform:translateY(-2px)}
-.btn-cta.outline{background:var(--branco);color:var(--vermelho);border:2px solid var(--vermelho)}
-.btn-cta.outline:hover{background:var(--vermelho-claro)}
-.contador{background:var(--vermelho);padding:48px 20px;border-bottom:4px solid var(--vermelho-hover)}
-.contador-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;max-width:700px;margin:0 auto}
-@media(max-width:540px){.contador-grid{grid-template-columns:1fr;gap:16px}}
-.contador-item{text-align:center;padding:28px 16px;background:rgba(255,255,255,0.1);border:1px solid rgba(255,255,255,0.2);border-radius:14px}
-.contador-numero{font-family:'Montserrat',sans-serif;font-weight:900;font-size:clamp(36px,7vw,56px);color:var(--branco);line-height:1;margin-bottom:8px}
-.contador-descricao{font-size:clamp(13px,2vw,15px);color:rgba(255,255,255,0.9);font-weight:500;line-height:1.4}
-.secao{padding:64px 20px;border-top:1px solid var(--borda)}
-.secao.bg-cinza{background:var(--cinza-fundo)}
-.secao.bg-vermelho-claro{background:var(--vermelho-claro)}
-.secao.bg-branco{background:var(--branco)}
-.secao-titulo{font-family:'Montserrat',sans-serif;font-weight:900;font-size:clamp(21px,4vw,32px);text-align:center;margin-bottom:8px;color:var(--preto)}
-.secao-titulo .destaque{color:var(--vermelho)}
-.secao-sub{text-align:center;color:var(--cinza-texto);font-size:clamp(13px,2vw,15px);margin-bottom:40px;max-width:560px;margin-left:auto;margin-right:auto}
-.banner-wrap img{width:100%;border-radius:12px;border:1px solid var(--borda)}
-.lista-itens{display:grid;grid-template-columns:repeat(auto-fit,minmax(270px,1fr));gap:12px;list-style:none}
-.lista-itens li{display:flex;align-items:flex-start;gap:12px;background:var(--branco);border:1px solid var(--borda);border-radius:10px;padding:14px 16px;font-size:14px;line-height:1.5;transition:border-color 0.2s,box-shadow 0.2s}
-.lista-itens li:hover{border-color:var(--vermelho);box-shadow:0 2px 12px rgba(220,38,38,0.08)}
-.check-icon{flex-shrink:0;width:20px;height:20px;background:var(--vermelho);border-radius:50%;display:flex;align-items:center;justify-content:center;margin-top:1px}
-.check-icon svg{width:10px;height:10px}
-.phone-video-section{overflow:hidden}
-.phone-video-grid{max-width:720px;margin:0 auto;display:grid;gap:14px;grid-template-columns:repeat(3,1fr);justify-items:center}
-.phone-card{width:min(200px,100%);display:grid;place-items:center}
-.phone-frame{position:relative;width:100%;aspect-ratio:9/16;border-radius:32px;background:#000;border:4px solid var(--borda);overflow:hidden;box-shadow:0 8px 24px rgba(220,38,38,0.12)}
-.phone-frame::before{content:"";position:absolute;inset:6px;border-radius:26px;border:2px solid rgba(255,255,255,.12);z-index:2;pointer-events:none}
-.phone-notch{position:absolute;top:6px;left:50%;transform:translateX(-50%);width:40%;height:16px;background:rgba(0,0,0,.75);border-radius:0 0 12px 12px;z-index:4}
-.video-host{position:absolute;inset:0;z-index:1;overflow:hidden}
-.video-host iframe{width:100%;height:100%;border:none}
-@media(max-width:640px){.phone-video-grid{grid-template-columns:1fr;gap:18px}.phone-card{width:min(240px,85vw)}.video-host iframe{pointer-events:none}.tap-center{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:100px;height:100px;border-radius:50%;z-index:5;cursor:pointer}}
-@media(min-width:641px){.tap-center{display:none}}
-.passos-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:32px}
-@media(max-width:700px){.passos-grid{grid-template-columns:1fr}}
-.passo-card{background:var(--branco);border:1px solid var(--borda);border-radius:12px;padding:28px 18px;text-align:center;transition:border-color 0.2s,box-shadow 0.2s}
-.passo-card:hover{border-color:var(--vermelho);box-shadow:0 4px 16px rgba(220,38,38,0.1)}
-.passo-num{display:inline-flex;align-items:center;justify-content:center;width:44px;height:44px;border-radius:50%;background:var(--vermelho);color:var(--branco);font-family:'Montserrat',sans-serif;font-weight:900;font-size:18px;margin-bottom:14px}
-.passo-card .letra{font-family:'Montserrat',sans-serif;font-size:18px;font-weight:900;color:var(--vermelho);margin-bottom:8px;letter-spacing:0.5px}
-.passo-card h3{font-size:15px;font-weight:700;margin-bottom:8px;color:var(--preto)}
-.passo-card p{font-size:13px;color:var(--cinza-texto);line-height:1.55}
-.vantagens-grid{display:grid;grid-template-columns:1fr 1fr;gap:40px;align-items:center}
-@media(max-width:640px){.vantagens-grid{grid-template-columns:1fr}}
-.vantagens-lista{list-style:none;display:flex;flex-direction:column;gap:14px}
-.vantagens-lista li{display:flex;align-items:center;gap:12px;font-size:15px;color:var(--preto)}
-.v-check{flex-shrink:0;width:22px;height:22px;background:var(--vermelho);border-radius:50%;display:flex;align-items:center;justify-content:center}
-.v-check svg{width:11px;height:11px}
-.bonus-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
-@media(max-width:540px){.bonus-grid{grid-template-columns:1fr;gap:16px}}
-.bonus-item-wrap{display:flex;flex-direction:column;gap:8px}
-.bonus-grid img{border-radius:10px;border:1px solid var(--borda);width:100%;transition:transform 0.2s,box-shadow 0.2s}
-.bonus-grid img:hover{transform:scale(1.03);box-shadow:0 4px 16px rgba(220,38,38,0.12)}
-.bonus-funcao{font-size:12.5px;color:var(--cinza-texto);text-align:center;line-height:1.4;padding:0 4px}
-.depo-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:10px;margin-bottom:40px}
-@media(max-width:640px){.depo-grid{display:flex;overflow-x:auto;scroll-snap-type:x mandatory;-webkit-overflow-scrolling:touch;gap:12px;padding-bottom:12px;margin-bottom:32px;grid-template-columns:unset}.depo-grid img{flex:0 0 75vw;width:75vw;scroll-snap-align:center;border-radius:10px}}
-.depo-grid img{border-radius:10px;border:1px solid var(--borda);width:100%}
-.como-funciona-img{width:100%;max-width:572px;margin:0 auto;border-radius:12px;border:1px solid var(--borda)}
-@media(max-width:640px){.como-funciona-img{max-width:100%}}
-.alerta-promo{background:var(--vermelho-claro);border:2px solid var(--vermelho);border-radius:10px;padding:16px 24px;text-align:center;margin-bottom:36px}
-.alerta-promo p{font-family:'Montserrat',sans-serif;font-weight:700;font-size:clamp(13px,2vw,15px);color:var(--vermelho)}
-.alerta-promo .countdown-num{background:var(--branco);color:var(--vermelho);padding:2px 10px;border-radius:4px;display:inline-block;margin:0 4px;font-weight:800;font-variant-numeric:tabular-nums}
-.dinheiro-box{background:var(--branco);border:1px solid var(--borda);border-radius:14px;padding:28px 24px;max-width:700px;margin:0 auto;font-size:clamp(14px,2vw,16px);color:var(--cinza-texto);line-height:1.7;text-align:center}
-.caminhos-grid{display:grid;grid-template-columns:1fr 1fr;gap:16px;max-width:760px;margin:0 auto}
-@media(max-width:640px){.caminhos-grid{grid-template-columns:1fr}}
-.caminho{border-radius:12px;padding:22px 18px;font-size:14.5px;line-height:1.55}
-.caminho.ruim{background:#FEF2F2;border:1px solid #FECACA;color:#7F1D1D}
-.caminho.bom{background:#F0FDF4;border:1px solid #BBF7D0;color:#14532D}
-.caminho strong{display:block;font-family:'Montserrat',sans-serif;font-size:15px;margin-bottom:8px}
-.planos-nota{text-align:center;margin-top:24px;font-size:14.5px;color:var(--cinza-texto);max-width:520px;margin-left:auto;margin-right:auto}
-.faq-lista{display:flex;flex-direction:column;gap:12px;max-width:720px;margin:0 auto}
-.faq-item{background:var(--branco);border:1px solid var(--borda);border-radius:12px;overflow:hidden;transition:border-color 0.2s}
-.faq-item:hover{border-color:var(--vermelho)}
-.faq-pergunta{width:100%;background:none;border:none;cursor:pointer;padding:18px 20px;display:flex;justify-content:space-between;align-items:center;font-family:'Montserrat',sans-serif;font-weight:700;font-size:clamp(13px,2vw,15px);color:var(--preto);text-align:left;gap:12px}
-.faq-icone{flex-shrink:0;width:28px;height:28px;background:var(--vermelho-claro);border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:18px;color:var(--vermelho);transition:transform 0.25s;font-weight:900;line-height:1}
-.faq-resposta{max-height:0;overflow:hidden;transition:max-height 0.35s ease,padding 0.35s;font-size:14px;color:var(--cinza-texto);line-height:1.7;padding:0 20px}
-.faq-item.aberto .faq-resposta{max-height:320px;padding:0 20px 18px}
-.faq-item.aberto .faq-icone{transform:rotate(45deg)}
-.entrega-box{display:flex;gap:36px;align-items:center;background:var(--vermelho-claro);border:1px solid var(--vermelho-medio);border-radius:14px;padding:42px 48px;max-width:640px;margin:0 auto}
-@media(max-width:540px){.entrega-box{flex-direction:column;text-align:center;padding:32px 24px;gap:24px}}
-.entrega-icones{display:flex;gap:16px;flex-shrink:0}
-.entrega-icone{width:72px;height:72px;background:var(--vermelho);border-radius:16px;display:flex;align-items:center;justify-content:center;font-size:34px}
-.entrega-box h3{font-size:24px;font-weight:700;margin-bottom:10px;color:var(--vermelho)}
-.entrega-box p{font-size:16px;color:var(--cinza-texto);line-height:1.7}
-.garantia-box{background:var(--branco);border:2px solid var(--vermelho-medio);border-radius:14px;padding:40px 28px;text-align:center;max-width:540px;margin:0 auto;box-shadow:0 4px 20px rgba(220,38,38,0.08)}
-.garantia-box img{max-width:140px;margin:0 auto 20px}
-.garantia-box h3{font-size:22px;font-weight:900;color:var(--vermelho);margin-bottom:12px}
-.garantia-box p{font-size:15px;color:var(--cinza-texto);line-height:1.7;max-width:420px;margin:0 auto}
-footer{border-top:1px solid var(--borda);padding:24px 20px;text-align:center;color:var(--cinza-texto);font-size:13px;background:var(--cinza-fundo)}
-footer a{color:var(--vermelho);text-decoration:underline}
-.text-center{text-align:center}.mt-32{margin-top:32px}.mt-24{margin-top:24px}
-@media(max-width:640px){.secao{padding:48px 16px}.hero{padding:44px 16px 32px}.como-funciona-img{max-width:100%;border-radius:8px}.bonus-grid{grid-template-columns:1fr;gap:16px}}
-.planos-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px}
-.plano{background:var(--branco);border:1px solid var(--borda);border-radius:14px;padding:32px 24px;display:flex;flex-direction:column;gap:20px;position:relative;text-align:center;box-shadow:0 2px 12px rgba(0,0,0,0.06)}
-.plano.destaque{border:2px solid var(--vermelho);box-shadow:0 4px 24px rgba(220,38,38,0.15)}
-.plano-badge{position:absolute;top:-14px;left:50%;transform:translateX(-50%);background:var(--vermelho);color:var(--branco);font-family:'Montserrat',sans-serif;font-weight:800;font-size:11px;letter-spacing:1px;text-transform:uppercase;padding:4px 18px;border-radius:999px;white-space:nowrap}
-.plano-header h3{font-size:12px;font-weight:700;text-transform:uppercase;letter-spacing:1px;color:var(--cinza-texto);margin-bottom:8px}
-.plano-sub{font-size:13px;color:var(--cinza-texto);margin-bottom:16px;line-height:1.4}
-.plano .plano-preco-box{background:var(--vermelho-claro);border:1px solid var(--vermelho-medio);border-radius:10px;padding:16px;margin-bottom:0;display:flex;flex-direction:column;align-items:center;gap:4px}
-.plano .plano-de{font-size:13px;color:var(--cinza-texto);text-decoration:line-through;margin-bottom:0}
-.plano .plano-valor{font-family:'Montserrat',sans-serif;font-weight:900;font-size:48px;color:var(--vermelho);line-height:1}
-.plano .plano-tipo{font-size:12px;color:var(--cinza-texto);margin-top:2px}
-.plano ul{list-style:none;display:flex;flex-direction:column;gap:10px;flex:1;text-align:left}
-.plano ul li{display:flex;align-items:flex-start;gap:10px;font-size:13px;color:var(--preto);line-height:1.4}
-.plano .p-check{flex-shrink:0;width:18px;height:18px;background:var(--vermelho);border-radius:50%;display:flex;align-items:center;justify-content:center;margin-top:1px}
-.plano .p-check svg{width:9px;height:9px}
-.plano ul li.bonus-item{color:var(--vermelho);font-weight:600}
-.plano ul li.bonus-item .p-check{background:var(--preto)}
-.plano .plano-rodape{font-size:11px;color:var(--cinza-texto);text-align:center;margin-top:0}
-.plano .super-oferta-wrap{text-align:center;margin-bottom:16px}
-.plano .super-oferta-wrap img{max-width:280px;margin:0 auto}
-.selo-seguranca{display:flex;align-items:center;justify-content:center;gap:8px;flex-wrap:wrap;margin-top:12px}
-.selo-seguranca span{display:inline-flex;align-items:center;gap:4px;background:var(--vermelho-claro);padding:5px 12px;border-radius:999px;font-weight:700;color:var(--vermelho-hover);font-size:11.5px}
-@media(max-width:620px){.planos-grid{grid-template-columns:1fr}}
+.wrap{max-width:1080px;margin:0 auto;padding:0 20px}
+.topbar{background:var(--ink);color:var(--amber-soft);padding:11px 16px;text-align:center;font-size:13px;font-weight:700;position:sticky;top:0;z-index:50;border-bottom:3px solid var(--amber)}
+.topbar b{color:var(--amber);background:rgba(245,158,11,.12);padding:2px 8px;border-radius:4px;margin:0 4px}
+
+/* HERO split */
+.hero{background:linear-gradient(135deg,#0B1C2C 0%,#16324A 55%,#1A3A2A 100%);color:var(--white);padding:48px 0 56px;position:relative;overflow:hidden}
+.hero::after{content:"";position:absolute;inset:auto -10% -40% 40%;height:70%;background:radial-gradient(circle,rgba(245,158,11,.25),transparent 60%);pointer-events:none}
+.hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:36px;align-items:center;position:relative;z-index:1}
+@media(max-width:860px){.hero-grid{grid-template-columns:1fr;gap:28px}}
+.kicker{display:inline-flex;align-items:center;gap:8px;background:rgba(245,158,11,.15);border:1px solid rgba(245,158,11,.45);color:var(--amber);font-size:12px;font-weight:800;letter-spacing:.08em;text-transform:uppercase;padding:7px 12px;border-radius:999px;margin-bottom:16px}
+.hero h1{font-size:clamp(32px,5.4vw,52px);font-weight:800;margin-bottom:14px;color:#fff}
+.hero h1 em{font-style:normal;color:var(--amber)}
+.hero-lead{font-size:clamp(14px,2vw,17px);color:#C9D4DE;max-width:540px;margin-bottom:22px}
+.hero-pretitulo{font-size:14px;font-weight:700;color:var(--amber);margin-bottom:10px}
+.stats{display:flex;flex-wrap:wrap;gap:10px;margin:22px 0 26px}
+.stat{background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.12);border-radius:12px;padding:12px 14px;min-width:140px}
+.stat strong{display:block;font-family:'Barlow Condensed',sans-serif;font-size:28px;color:var(--amber);line-height:1}
+.stat span{font-size:12px;color:#B7C4D0}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;background:var(--amber);color:var(--ink);font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:clamp(16px,2.4vw,20px);letter-spacing:.04em;text-transform:uppercase;padding:16px 28px;border-radius:10px;border:none;cursor:pointer;transition:transform .15s,background .15s;width:100%;max-width:420px}
+.btn:hover{background:#FBBF24;transform:translateY(-2px)}
+.btn.ghost{background:transparent;color:#fff;border:2px solid rgba(255,255,255,.35);max-width:none;width:auto;padding:12px 18px;font-size:15px}
+.hero-visual{border-radius:18px;overflow:hidden;border:1px solid rgba(255,255,255,.12);box-shadow:0 30px 60px rgba(0,0,0,.35)}
+.hero-visual img{width:100%;aspect-ratio:4/3;object-fit:cover}
+
+.section{padding:64px 0}
+.section.tight{padding:48px 0}
+.section.dark{background:var(--ink);color:#fff}
+.section.paper{background:var(--paper)}
+.section.amber{background:var(--amber-soft)}
+.eyebrow{font-size:12px;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:var(--amber-deep);margin-bottom:10px}
+.section.dark .eyebrow{color:var(--amber)}
+.h2{font-size:clamp(28px,4.5vw,42px);font-weight:800;margin-bottom:12px;max-width:720px}
+.h2 span{color:var(--amber-deep)}
+.section.dark .h2 span{color:var(--amber)}
+.lead{color:var(--muted);font-size:15.5px;max-width:620px;margin-bottom:28px}
+.section.dark .lead{color:#A8B6C3}
+.pain-card{background:rgba(255,255,255,.04);border:1px solid rgba(255,255,255,.1);border-left:4px solid var(--amber);border-radius:14px;padding:24px 22px;font-size:16px;line-height:1.75;color:#D5DEE7;max-width:820px}
+
+.recv{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
+@media(max-width:640px){.recv{grid-template-columns:1fr}}
+.recv-item{background:var(--white);border:1px solid var(--line);border-radius:14px;padding:16px 16px 16px 14px;display:flex;gap:12px;align-items:flex-start}
+.recv-ico{flex-shrink:0;width:38px;height:38px;border-radius:10px;background:var(--ink);color:var(--amber);display:grid;place-items:center;font-size:18px}
+.recv-item p{font-size:14px;line-height:1.45;color:var(--ink)}
+.recv-item small{display:block;color:var(--muted);font-size:12.5px;margin-top:4px}
+
+/* cinema videos */
+.cinema{background:#070F18;padding:56px 0;color:#fff}
+.film{display:flex;gap:16px;overflow-x:auto;scroll-snap-type:x mandatory;padding:8px 4px 20px;-webkit-overflow-scrolling:touch}
+.reel{flex:0 0 min(260px,78vw);scroll-snap-align:center}
+.reel-frame{background:#000;border-radius:16px;overflow:hidden;border:2px solid #2A3B4D;box-shadow:0 12px 40px rgba(0,0,0,.45);position:relative;aspect-ratio:9/16}
+.reel-frame::before,.reel-frame::after{content:"";position:absolute;top:0;bottom:0;width:10px;background:repeating-linear-gradient(#0B1C2C 0 8px,#F59E0B 8px 12px);z-index:3;opacity:.85}
+.reel-frame::before{left:0}.reel-frame::after{right:0}
+.reel-frame iframe{width:100%;height:100%;border:0;position:absolute;inset:0}
+.tap{position:absolute;inset:0;z-index:4;cursor:pointer}
+@media(min-width:860px){.tap{display:none}.film{justify-content:center}}
+
+.timeline{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;counter-reset:step}
+@media(max-width:720px){.timeline{grid-template-columns:1fr}}
+.t-card{background:var(--white);border:1px solid var(--line);border-radius:16px;padding:22px 18px;position:relative}
+.t-card .tag{font-family:'Barlow Condensed',sans-serif;font-size:22px;font-weight:800;color:var(--amber-deep);letter-spacing:.06em}
+.t-card h3{font-size:20px;margin:6px 0 8px;text-transform:uppercase}
+.t-card p{font-size:14px;color:var(--muted)}
+
+.bento{display:grid;grid-template-columns:1.1fr .9fr;gap:18px;align-items:stretch}
+@media(max-width:800px){.bento{grid-template-columns:1fr}}
+.bento img{width:100%;height:100%;object-fit:cover;border-radius:16px;border:1px solid var(--line);min-height:320px}
+.checks{list-style:none;display:flex;flex-direction:column;gap:12px}
+.checks li{display:flex;gap:12px;align-items:flex-start;background:var(--white);border:1px solid var(--line);border-radius:12px;padding:14px}
+.checks i{flex-shrink:0;width:22px;height:22px;border-radius:6px;background:var(--ink);color:var(--amber);display:grid;place-items:center;font-style:normal;font-weight:800;font-size:12px;margin-top:1px}
+
+.passos-img{border-radius:16px;border:1px solid var(--line);overflow:hidden;background:#0B1C2C}
+.passos-img img{width:100%}
+
+.bonus-rail{display:grid;grid-template-columns:repeat(3,1fr);gap:14px}
+@media(max-width:900px){.bonus-rail{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:560px){.bonus-rail{grid-template-columns:1fr}}
+.bonus-card{background:var(--white);border:1px solid var(--line);border-radius:16px;overflow:hidden;display:flex;flex-direction:column}
+.bonus-card img{width:100%;aspect-ratio:3/4;object-fit:cover}
+.bonus-card .cap{padding:12px 14px 16px;font-size:12.5px;color:var(--muted);text-align:center}
+
+.paths{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+@media(max-width:700px){.paths{grid-template-columns:1fr}}
+.path{border-radius:16px;padding:22px;font-size:14.5px;line-height:1.55}
+.path strong{display:block;font-family:'Barlow Condensed',sans-serif;font-size:22px;margin-bottom:8px;letter-spacing:.03em}
+.path.bad{background:#FEF2F2;border:1px solid #FECACA;color:#7F1D1D}
+.path.good{background:#ECFDF5;border:1px solid #A7F3D0;color:#065F46}
+
+.countdown{display:flex;align-items:center;justify-content:center;gap:10px;flex-wrap:wrap;background:var(--ink);color:#fff;border-radius:14px;padding:14px 18px;margin-bottom:28px;border:1px solid rgba(245,158,11,.35)}
+.countdown .clock{font-family:'Barlow Condensed',sans-serif;font-size:32px;color:var(--amber);font-variant-numeric:tabular-nums;letter-spacing:.04em}
+
+.plans{display:grid;grid-template-columns:1fr 1.15fr;gap:18px;align-items:stretch}
+@media(max-width:800px){.plans{grid-template-columns:1fr}}
+.plan{background:var(--white);border:1px solid var(--line);border-radius:20px;padding:28px 22px;display:flex;flex-direction:column;gap:16px;position:relative}
+.plan.featured{background:var(--ink);color:#fff;border:2px solid var(--amber);box-shadow:0 20px 50px rgba(11,28,44,.25)}
+.plan .badge{position:absolute;top:-12px;left:20px;background:var(--amber);color:var(--ink);font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:13px;padding:5px 12px;border-radius:999px;letter-spacing:.06em}
+.plan h3{font-size:22px}
+.plan .sub{font-size:13.5px;color:var(--muted);text-transform:none;font-family:'Plus Jakarta Sans',sans-serif;letter-spacing:0;line-height:1.45}
+.plan.featured .sub{color:#B7C4D0}
+.price-box{background:var(--stone);border-radius:14px;padding:16px;text-align:center}
+.plan.featured .price-box{background:rgba(255,255,255,.06);border:1px solid rgba(245,158,11,.25)}
+.price-box .de{font-size:13px;color:var(--muted);text-decoration:line-through}
+.price-box .val{font-family:'Barlow Condensed',sans-serif;font-size:56px;font-weight:800;color:var(--amber-deep);line-height:1}
+.plan.featured .price-box .val{color:var(--amber)}
+.price-box .tipo{font-size:12px;color:var(--muted)}
+.plan ul{list-style:none;display:flex;flex-direction:column;gap:9px;flex:1}
+.plan li{display:flex;gap:10px;align-items:flex-start;font-size:13.5px}
+.plan li::before{content:"▸";color:var(--amber-deep);font-weight:800}
+.plan.featured li::before{color:var(--amber)}
+.plan .btn{max-width:none}
+.plan.featured .btn{background:var(--amber);color:var(--ink)}
+.selo-img{max-width:280px;margin:0 auto 8px}
+.note{text-align:center;margin-top:22px;font-size:14.5px;color:var(--muted)}
+.safe{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin-top:10px}
+.safe span{font-size:11.5px;background:rgba(245,158,11,.12);color:var(--amber);padding:5px 10px;border-radius:999px;font-weight:700}
+.plan:not(.featured) .safe span{background:var(--amber-soft);color:var(--amber-deep)}
+
+.deliver{display:grid;grid-template-columns:.9fr 1.1fr;gap:18px;align-items:center}
+@media(max-width:700px){.deliver{grid-template-columns:1fr}}
+.deliver-box{background:var(--ink);color:#fff;border-radius:18px;padding:28px;border:1px solid rgba(245,158,11,.3)}
+.deliver-box h3{font-size:28px;margin-bottom:8px;color:var(--amber)}
+.garantia{background:var(--white);border:1px solid var(--line);border-radius:18px;padding:28px;text-align:center}
+.garantia img{width:140px;margin:0 auto 14px}
+.garantia h3{font-size:26px;margin-bottom:8px}
+.garantia p{color:var(--muted);font-size:14.5px}
+
+.faq{display:flex;flex-direction:column;gap:10px;max-width:760px}
+.faq details{background:var(--white);border:1px solid var(--line);border-radius:12px;padding:0}
+.faq summary{cursor:pointer;list-style:none;padding:16px 18px;font-weight:700;font-size:14.5px;display:flex;justify-content:space-between;gap:12px}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";color:var(--amber-deep);font-weight:800;font-size:18px}
+.faq details[open] summary::after{content:"–"}
+.faq .ans{padding:0 18px 16px;color:var(--muted);font-size:14px;line-height:1.65}
+
+footer{background:var(--ink);color:#8FA0B0;padding:28px 20px;text-align:center;font-size:13px}
+footer a{color:var(--amber);text-decoration:underline}
+.center{text-align:center}
+.mt{margin-top:24px}
+
+/* exit popup restyle */
+.xp-ov{position:fixed;inset:0;z-index:10000;display:none;align-items:center;justify-content:center;padding:16px;background:rgba(7,15,24,.78);backdrop-filter:blur(4px)}
+.xp-ov.xp-on{display:flex}
+.xp-box{position:relative;width:100%;max-width:440px;max-height:calc(100vh - 32px);overflow:auto;background:var(--ink);color:#fff;border:1px solid rgba(245,158,11,.4);border-radius:18px;padding:28px 22px 20px;text-align:center;box-shadow:0 24px 70px rgba(0,0,0,.5)}
+.xp-x{position:absolute;top:8px;right:10px;width:36px;height:36px;border:0;background:none;color:#9CA3AF;font-size:26px;cursor:pointer}
+.xp-tag{display:inline-block;background:var(--amber);color:var(--ink);font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:12px;letter-spacing:1px;text-transform:uppercase;padding:5px 12px;border-radius:999px;margin-bottom:12px}
+.xp-tt{font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:clamp(24px,6vw,30px);margin:0 0 8px;text-transform:uppercase}
+.xp-sub{font-size:14px;color:#A8B6C3;margin:0 0 14px}
+.xp-list{list-style:none;margin:0 0 16px;padding:0;display:grid;gap:8px;text-align:left}
+.xp-list li{display:flex;align-items:center;gap:10px;padding:11px 12px;border:1px solid rgba(245,158,11,.35);border-radius:12px;background:rgba(255,255,255,.04);font-weight:700;font-size:14px}
+.xp-list em{margin-left:auto;font-style:normal;font-size:10px;color:var(--amber);text-transform:uppercase;letter-spacing:.06em}
+.xp-cta{display:block;background:var(--amber);color:var(--ink)!important;font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:17px;padding:16px;border-radius:10px;text-transform:uppercase}
+.xp-no{margin-top:12px;background:none;border:0;color:#8FA0B0;font-size:12.5px;text-decoration:underline;cursor:pointer}
+.xp-safe{margin:12px 0 0;font-size:11.5px;color:#8FA0B0}
 </style>
-<!-- Kirvano: repassa os parametros da URL (UTM) para os links de checkout -->
 <script>
 window.addEventListener('load',function(){
   var qs=document.location.search.replace('?','');
@@ -165,264 +188,231 @@ window.addEventListener('load',function(){
 </head>
 <body>
 
-<div class="urgencia">🔥 Promoção encerra hoje — <span class="data-destaque" id="data-hoje"></span> Garanta agora antes que o preço volte!</div>
+<div class="topbar">Oferta limitada — <b id="data-hoje"></b> · os 6 bônus ainda estão liberados</div>
 <script>const _d=new Date();const _m=["Jan","Fev","Mar","Abr","Mai","Jun","Jul","Ago","Set","Out","Nov","Dez"];document.getElementById('data-hoje').textContent=_d.getDate()+'/'+_m[_d.getMonth()];</script>
 
 <section class="hero">
-  <div class="container">
-    <span class="nicho-badge">Para Oficinas Mecânicas</span>
-    <p class="hero-pretitulo">⚠️ Para donos de oficina que estão vendo o box vazio</p>
-    <h1>Divulga Serviços para Oficinas Mecânicas: <span class="destaque">+50 vídeos prontos</span> que lembram seu cliente da revisão e fazem ele chamar no seu WhatsApp</h1>
-    <p class="subtitulo">Seu cliente não sumiu porque achou oficina mais barata. Ele sumiu porque ESQUECEU. Esqueceu da troca de óleo, do freio, da bateria. E cada esquecimento é uma ordem de serviço que vai parar no concorrente. Poste hoje e lembre ele por você.</p>
-    <div class="hero-banner"><img src="banner_1.webp" alt="Divulga Serviços para Oficinas Mecânicas" loading="eager"></div>
-    <a href="#planos" class="btn-cta">QUERO DIVULGAR MEUS SERVIÇOS HOJE</a>
-  </div>
-</section>
-
-<div class="contador">
-  <div class="contador-grid">
-    <div class="contador-item"><div class="contador-numero">+50</div><div class="contador-descricao">Vídeos de serviços prontos</div></div>
-    <div class="contador-item"><div class="contador-numero">+100</div><div class="contador-descricao">Posts editáveis</div></div>
-    <div class="contador-item"><div class="contador-numero">+6</div><div class="contador-descricao">Bônus para fechar mais serviços</div></div>
-  </div>
-</div>
-
-<section class="secao bg-branco">
-  <div class="container">
-    <h2 class="secao-titulo">Quanto dinheiro está <span class="destaque">escapando</span> da sua oficina?</h2>
-    <div class="dinheiro-box">Pensa em quantos clientes passaram pela sua oficina nos últimos 12 meses e nunca mais voltaram. Não foi por serviço mal feito. Foi porque ninguém lembrou eles. Uma única troca de óleo, um alinhamento ou uma pastilha de freio que volta para a sua oficina já paga o Divulga Serviços várias vezes. O pacote custa menos que um serviço. Não divulgar é que sai caro.</div>
-  </div>
-</section>
-
-<section class="secao bg-cinza">
-  <div class="container">
-    <h2 class="secao-titulo">O Que Você <span class="destaque">Recebe</span></h2>
-    <p class="secao-sub">Vídeos e posts que trabalham como vendedores da sua oficina todos os dias</p>
-    <ul class="lista-itens">
-      <li><span class="check-icon"><svg viewBox="0 0 10 8" fill="none"><path d="M1 3.5L3.5 6.5L9 1" stroke="white" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>🎥 +50 Vídeos Divulga Serviços para Oficinas</li>
-      <li><span class="check-icon"><svg viewBox="0 0 10 8" fill="none"><path d="M1 3.5L3.5 6.5L9 1" stroke="white" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>+100 Posts editáveis para usar hoje</li>
-      <li><span class="check-icon"><svg viewBox="0 0 10 8" fill="none"><path d="M1 3.5L3.5 6.5L9 1" stroke="white" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>🛢️ Óleo do motor avisando que está vencido → o cliente lembra e agenda a troca</li>
-      <li><span class="check-icon"><svg viewBox="0 0 10 8" fill="none"><path d="M1 3.5L3.5 6.5L9 1" stroke="white" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>🔋 Bateria dizendo que vai deixar ele na mão → o cliente troca antes de ficar parado</li>
-      <li><span class="check-icon"><svg viewBox="0 0 10 8" fill="none"><path d="M1 3.5L3.5 6.5L9 1" stroke="white" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>🔩 Parafuso frouxo reclamando do barulho → o cliente traz o carro para revisão</li>
-      <li><span class="check-icon"><svg viewBox="0 0 10 8" fill="none"><path d="M1 3.5L3.5 6.5L9 1" stroke="white" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>🔧 Chave de boca pronta para resolver → sua oficina vira a primeira lembrança</li>
-    </ul>
-    <div class="lista-cta-wrap" style="text-align:center;margin-top:28px"><a href="#planos" class="btn-cta">E MUITO MAIS DENTRO DO NOSSO PACOTE</a></div>
-  </div>
-</section>
-
-<section class="secao bg-branco">
-  <div class="container">
-    <h2 class="secao-titulo">Veja Alguns <span class="destaque">Modelos</span></h2>
-    <p class="secao-sub">Exemplos reais do que você vai receber para postar</p>
-    <div class="phone-video-grid">
-    <div class="phone-card"><div class="phone-frame"><div class="phone-notch"></div><div class="video-host"><iframe src="https://play.tynk.ai/p/8b220234-7e01-4c9c-bb56-a293cf485173" width="100%" height="100%" style="aspect-ratio:9/16;border:none;" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div><div class="tap-center" onclick="ativarVideo(this)"></div></div></div>
-    <div class="phone-card"><div class="phone-frame"><div class="phone-notch"></div><div class="video-host"><iframe src="https://play.tynk.ai/p/96a5b94a-193b-4aae-9501-af1c767f61b5" width="100%" height="100%" style="aspect-ratio:9/16;border:none;" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div><div class="tap-center" onclick="ativarVideo(this)"></div></div></div>
-    <div class="phone-card"><div class="phone-frame"><div class="phone-notch"></div><div class="video-host"><iframe src="https://play.tynk.ai/p/e0c988bd-5a31-4749-9128-94c5f69b16d9" width="100%" height="100%" style="aspect-ratio:9/16;border:none;" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div><div class="tap-center" onclick="ativarVideo(this)"></div></div></div>
-    </div>
-  </div>
-</section>
-
-<section class="secao bg-cinza">
-  <div class="container">
-    <h2 class="secao-titulo">Como o Divulga Serviços <span class="destaque">faz o cliente voltar</span></h2>
-    <p class="secao-sub">Do post ao WhatsApp, e do WhatsApp ao box cheio</p>
-    <div class="passos-grid">
-      <div class="passo-card"><div class="passo-num">1</div><div class="letra">LEMBRA</div><h3>Ele se reconhece</h3><p>O vídeo mostra o problema do carro dele: óleo vencido, freio no fim, bateria fraca. Ele se reconhece na hora.</p></div>
-      <div class="passo-card"><div class="passo-num">2</div><div class="letra">CHAMA</div><h3>No seu WhatsApp</h3><p>Ele pensa: 'preciso ver isso' e chama no seu WhatsApp. Não no do concorrente.</p></div>
-      <div class="passo-card"><div class="passo-num">3</div><div class="letra">FATURA</div><h3>Serviço no box</h3><p>A mensagem vira orçamento, e o orçamento vira serviço no seu box.</p></div>
-    </div>
-    <div class="text-center mt-32">
-      <p style="color:var(--cinza-texto);font-size:15px;max-width:520px;margin:0 auto 24px;">👉 <strong style="color:var(--preto);">Cada post deixa de ser só conteúdo e vira um lembrete de serviço para quem já precisa dele.</strong></p>
-      <a href="#planos" class="btn-cta">VER PLANOS E PREÇOS</a>
-    </div>
-  </div>
-</section>
-
-<section class="secao bg-branco">
-  <div class="container">
-    <h2 class="secao-titulo">Por que oficinas que divulgam <span class="destaque">faturam mais</span> que as que esperam</h2>
-    <p class="secao-sub">Tudo que você precisa para lembrar o cliente e fechar serviço todos os dias</p>
-    <div class="vantagens-grid">
-      <div class="banner-wrap"><img src="banner_2.webp" alt="Cliente voltando pelo WhatsApp" loading="lazy"></div>
-      <div>
-        <ul class="vantagens-lista">
-          <li><span class="v-check"><svg viewBox="0 0 11 8" fill="none"><path d="M1 3.5L3.5 6.5L10 1" stroke="white" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Pare de depender do cliente lembrar sozinho</li>
-          <li><span class="v-check"><svg viewBox="0 0 11 8" fill="none"><path d="M1 3.5L3.5 6.5L10 1" stroke="white" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Apareça todos os dias sem gastar horas criando</li>
-          <li><span class="v-check"><svg viewBox="0 0 11 8" fill="none"><path d="M1 3.5L3.5 6.5L10 1" stroke="white" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Seja a oficina que vem na cabeça quando o carro dá problema</li>
-          <li><span class="v-check"><svg viewBox="0 0 11 8" fill="none"><path d="M1 3.5L3.5 6.5L10 1" stroke="white" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Saia na frente do concorrente que não posta nada</li>
-          <li><span class="v-check"><svg viewBox="0 0 11 8" fill="none"><path d="M1 3.5L3.5 6.5L10 1" stroke="white" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Transforme seguidor em orçamento no WhatsApp</li>
-          <li><span class="v-check"><svg viewBox="0 0 11 8" fill="none"><path d="M1 3.5L3.5 6.5L10 1" stroke="white" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Baixou, postou, divulgou</li>
-        </ul>
-        <div class="mt-24"><a href="#planos" class="btn-cta" style="max-width:100%;">QUERO DIVULGAR MEUS SERVIÇOS HOJE</a></div>
+  <div class="wrap hero-grid">
+    <div>
+      <span class="kicker">Oficinas mecânicas</span>
+      <p class="hero-pretitulo">⚠️ Para donos de oficina que estão vendo o box vazio</p>
+      <h1>Divulga Serviços para Oficinas Mecânicas: <em>+50 vídeos prontos</em> que lembram seu cliente da revisão e fazem ele chamar no seu WhatsApp</h1>
+      <p class="hero-lead">Seu cliente não sumiu porque achou oficina mais barata. Ele sumiu porque ESQUECEU. Esqueceu da troca de óleo, do freio, da bateria. E cada esquecimento é uma ordem de serviço que vai parar no concorrente. Poste hoje e lembre ele por você.</p>
+      <div class="stats">
+        <div class="stat"><strong>+50</strong><span>Vídeos de serviços prontos</span></div>
+        <div class="stat"><strong>+100</strong><span>Posts editáveis</span></div>
+        <div class="stat"><strong>+6</strong><span>Bônus para fechar mais serviços</span></div>
       </div>
+      <a href="#planos" class="btn">Quero divulgar meus serviços hoje</a>
+    </div>
+    <div class="hero-visual"><img src="img/hero.webp" alt="Mecânico recebendo cliente no WhatsApp" width="960" height="720"></div>
+  </div>
+</section>
+
+<section class="section dark tight">
+  <div class="wrap">
+    <p class="eyebrow">O custo de não lembrar</p>
+    <h2 class="h2">Quanto dinheiro está <span>escapando</span> da sua oficina?</h2>
+    <div class="pain-card">Pensa em quantos clientes passaram pela sua oficina nos últimos 12 meses e nunca mais voltaram. Não foi por serviço mal feito. Foi porque ninguém lembrou eles. Uma única troca de óleo, um alinhamento ou uma pastilha de freio que volta para a sua oficina já paga o Divulga Serviços várias vezes. O pacote custa menos que um serviço. Não divulgar é que sai caro.</div>
+  </div>
+</section>
+
+<section class="cinema">
+  <div class="wrap">
+    <p class="eyebrow" style="color:var(--amber)">Amostras reais</p>
+    <h2 class="h2" style="color:#fff">Veja alguns <span>modelos</span></h2>
+    <p class="lead">Exemplos reais do que você vai receber para postar — em formato de filme vertical.</p>
+    <div class="film">
+      <div class="reel"><div class="reel-frame"><iframe src="https://play.tynk.ai/p/8b220234-7e01-4c9c-bb56-a293cf485173" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe><div class="tap" onclick="ativarVideo(this)"></div></div></div>
+      <div class="reel"><div class="reel-frame"><iframe src="https://play.tynk.ai/p/96a5b94a-193b-4aae-9501-af1c767f61b5" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe><div class="tap" onclick="ativarVideo(this)"></div></div></div>
+      <div class="reel"><div class="reel-frame"><iframe src="https://play.tynk.ai/p/e0c988bd-5a31-4749-9128-94c5f69b16d9" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe><div class="tap" onclick="ativarVideo(this)"></div></div></div>
     </div>
   </div>
 </section>
 
-<section class="secao bg-cinza">
-  <div class="container">
-    <h2 class="secao-titulo">Como Funciona? <span class="destaque">É Simples e Rápido</span></h2>
-    <p class="secao-sub">Em minutos você já tem tudo pronto para postar</p>
-    <img src="como_funciona.webp" alt="Como funciona o Divulga Serviços" loading="lazy" class="como-funciona-img">
+<section class="section paper">
+  <div class="wrap">
+    <p class="eyebrow">O pacote</p>
+    <h2 class="h2">O que você <span>recebe</span></h2>
+    <p class="lead">Vídeos e posts que trabalham como vendedores da sua oficina todos os dias</p>
+    <div class="recv">
+      <div class="recv-item"><div class="recv-ico">🎥</div><p>🎥 +50 Vídeos Divulga Serviços para Oficinas<small>Prontos para Instagram, TikTok e WhatsApp</small></p></div>
+      <div class="recv-item"><div class="recv-ico">🖼️</div><p>+100 Posts editáveis para usar hoje<small>Altere textos, cores e elementos</small></p></div>
+      <div class="recv-item"><div class="recv-ico">🛢️</div><p>🛢️ Óleo do motor avisando que está vencido<small>→ o cliente lembra e agenda a troca</small></p></div>
+      <div class="recv-item"><div class="recv-ico">🔋</div><p>🔋 Bateria dizendo que vai deixar ele na mão<small>→ o cliente troca antes de ficar parado</small></p></div>
+      <div class="recv-item"><div class="recv-ico">🔩</div><p>🔩 Parafuso frouxo reclamando do barulho<small>→ o cliente traz o carro para revisão</small></p></div>
+      <div class="recv-item"><div class="recv-ico">🔧</div><p>🔧 Chave de boca pronta para resolver<small>→ sua oficina vira a primeira lembrança</small></p></div>
+    </div>
+    <div class="center mt"><a href="#planos" class="btn" style="max-width:360px">E muito mais dentro do pacote</a></div>
   </div>
 </section>
 
-<section class="secao bg-branco">
-  <div class="container">
-    <h2 class="secao-titulo">🎁 6 Bônus para transformar mensagem em <span class="destaque">serviço fechado</span></h2>
-    <p class="secao-sub">Ferramentas que normalmente custariam R$366 — hoje você recebe de graça</p>
-    <div class="bonus-grid">
-      <div class="bonus-item-wrap"><img src="bonus_1.webp" alt="Bônus 1" loading="lazy"></div>
-      <div class="bonus-item-wrap"><img src="bonus_2.webp" alt="Bônus 2" loading="lazy"></div>
-      <div class="bonus-item-wrap"><img src="bonus_3.webp" alt="Bônus 3" loading="lazy"></div>
-      <div class="bonus-item-wrap"><img src="bonus_4.webp" alt="Bônus 4 — Protocolo de Atendimento" loading="lazy"><p class="bonus-funcao">o que falar para o orçamento virar serviço</p></div>
-      <div class="bonus-item-wrap"><img src="bonus_5.webp" alt="Bônus 5 — Biblioteca de Respostas WhatsApp" loading="lazy"><p class="bonus-funcao">respostas prontas para não perder cliente na conversa</p></div>
-      <div class="bonus-item-wrap"><img src="bonus_6.webp" alt="Bônus 6" loading="lazy"></div>
+<section class="section">
+  <div class="wrap">
+    <p class="eyebrow">O método</p>
+    <h2 class="h2">Como o Divulga Serviços <span>faz o cliente voltar</span></h2>
+    <p class="lead">Do post ao WhatsApp, e do WhatsApp ao box cheio</p>
+    <div class="timeline">
+      <div class="t-card"><div class="tag">1 · Lembra</div><h3>Ele se reconhece</h3><p>O vídeo mostra o problema do carro dele: óleo vencido, freio no fim, bateria fraca. Ele se reconhece na hora.</p></div>
+      <div class="t-card"><div class="tag">2 · Chama</div><h3>No seu WhatsApp</h3><p>Ele pensa: 'preciso ver isso' e chama no seu WhatsApp. Não no do concorrente.</p></div>
+      <div class="t-card"><div class="tag">3 · Fatura</div><h3>Serviço no box</h3><p>A mensagem vira orçamento, e o orçamento vira serviço no seu box.</p></div>
+    </div>
+    <p class="lead mt" style="margin-bottom:0">👉 Cada post deixa de ser só conteúdo e vira um lembrete de serviço para quem já precisa dele.</p>
+    <div class="center mt"><a href="#planos" class="btn" style="max-width:320px">Ver planos e preços</a></div>
+  </div>
+</section>
+
+<section class="section paper">
+  <div class="wrap">
+    <p class="eyebrow">Vantagens</p>
+    <h2 class="h2">Por que oficinas que divulgam <span>faturam mais</span> que as que esperam</h2>
+    <p class="lead">Tudo que você precisa para lembrar o cliente e fechar serviço todos os dias</p>
+    <div class="bento">
+      <img src="img/vantagens.webp" alt="Clientes voltando à oficina" loading="lazy" width="720" height="960">
+      <ul class="checks">
+        <li><i>✓</i><span>Pare de depender do cliente lembrar sozinho</span></li>
+        <li><i>✓</i><span>Apareça todos os dias sem gastar horas criando</span></li>
+        <li><i>✓</i><span>Seja a oficina que vem na cabeça quando o carro dá problema</span></li>
+        <li><i>✓</i><span>Saia na frente do concorrente que não posta nada</span></li>
+        <li><i>✓</i><span>Transforme seguidor em orçamento no WhatsApp</span></li>
+        <li><i>✓</i><span>Baixou, postou, divulgou</span></li>
+        <li style="background:transparent;border:0;padding:4px 0"><a href="#planos" class="btn" style="max-width:100%">Quero divulgar meus serviços hoje</a></li>
+      </ul>
     </div>
   </div>
 </section>
 
-<section class="secao bg-cinza">
-  <div class="container">
-    <h2 class="secao-titulo">Veja o Que Estão <span class="destaque">Falando</span></h2>
-    <p class="secao-sub">🔥 Donos de oficinas que já usaram o pacote</p>
-    <div class="depo-grid">
-      <img src="depo_1.webp" alt="Depoimento 1" loading="lazy"><img src="depo_2.webp" alt="Depoimento 2" loading="lazy">
-      <img src="depo_3.webp" alt="Depoimento 3" loading="lazy"><img src="depo_4.webp" alt="Depoimento 4" loading="lazy">
-    </div>
-    <div class="phone-video-grid">
-    <div class="phone-card"><div class="phone-frame"><div class="phone-notch"></div><div class="video-host"><iframe src="https://play.tynk.ai/p/efbdc61e-2318-4715-bcca-4e00c4b338ea" width="100%" height="100%" style="aspect-ratio:9/16;border:none;" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div><div class="tap-center" onclick="ativarVideo(this)"></div></div></div>
-    <div class="phone-card"><div class="phone-frame"><div class="phone-notch"></div><div class="video-host"><iframe src="https://play.tynk.ai/p/a90b96e8-a62b-4465-ae68-37d4217ff71d" width="100%" height="100%" style="aspect-ratio:9/16;border:none;" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div><div class="tap-center" onclick="ativarVideo(this)"></div></div></div>
-    <div class="phone-card"><div class="phone-frame"><div class="phone-notch"></div><div class="video-host"><iframe src="https://play.tynk.ai/p/9b03d38d-e921-4ab2-bb96-714bf0ddc717" width="100%" height="100%" style="aspect-ratio:9/16;border:none;" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen loading="lazy"></iframe></div><div class="tap-center" onclick="ativarVideo(this)"></div></div></div>
+<section class="section">
+  <div class="wrap">
+    <p class="eyebrow">Simples</p>
+    <h2 class="h2">Como funciona? <span>É rápido</span></h2>
+    <p class="lead">Em minutos você já tem tudo pronto para postar</p>
+    <div class="passos-img"><img src="img/passos.webp" alt="Baixe, poste, feche serviço" loading="lazy" width="1200" height="675"></div>
+  </div>
+</section>
+
+<section class="section amber">
+  <div class="wrap">
+    <p class="eyebrow">Extras</p>
+    <h2 class="h2">🎁 6 Bônus para transformar mensagem em <span>serviço fechado</span></h2>
+    <p class="lead">Ferramentas que normalmente custariam R$366 — hoje você recebe de graça</p>
+    <div class="bonus-rail">
+      <div class="bonus-card"><img src="img/bonus1.webp" alt="Bônus 1" loading="lazy"></div>
+      <div class="bonus-card"><img src="img/bonus2.webp" alt="Bônus 2" loading="lazy"></div>
+      <div class="bonus-card"><img src="img/bonus3.webp" alt="Bônus 3" loading="lazy"></div>
+      <div class="bonus-card"><img src="img/bonus4.webp" alt="Bônus 4" loading="lazy"><div class="cap">o que falar para o orçamento virar serviço</div></div>
+      <div class="bonus-card"><img src="img/bonus5.webp" alt="Bônus 5" loading="lazy"><div class="cap">respostas prontas para não perder cliente na conversa</div></div>
+      <div class="bonus-card"><img src="img/bonus6.webp" alt="Bônus 6" loading="lazy"></div>
     </div>
   </div>
 </section>
 
-<section class="secao bg-branco">
-  <div class="container">
-    <h2 class="secao-titulo">Você tem <span class="destaque">dois caminhos</span></h2>
-    <p class="secao-sub">Escolha o que faz sentido para a sua oficina</p>
-    <div class="caminhos-grid">
-      <div class="caminho ruim"><strong>❌ Continuar esperando</strong>Continuar esperando o cliente lembrar sozinho, enquanto a oficina do lado posta todo dia e fica com o serviço que era seu.</div>
-      <div class="caminho bom"><strong>✅ Começar hoje</strong>Por menos do que custa um serviço, começar hoje a divulgar e lembrar seus clientes antes do concorrente.</div>
+<section class="section paper">
+  <div class="wrap">
+    <p class="eyebrow">Decisão</p>
+    <h2 class="h2">Você tem <span>dois caminhos</span></h2>
+    <div class="paths">
+      <div class="path bad"><strong>❌ Continuar esperando</strong>Continuar esperando o cliente lembrar sozinho, enquanto a oficina do lado posta todo dia e fica com o serviço que era seu.</div>
+      <div class="path good"><strong>✅ Começar hoje</strong>Por menos do que custa um serviço, começar hoje a divulgar e lembrar seus clientes antes do concorrente.</div>
     </div>
   </div>
 </section>
 
-<section class="secao bg-vermelho-claro" id="planos">
-  <div class="container">
-    <div class="alerta-promo"><p id="bonus-countdown-text">⏳ Os 6 bônus estão reservados para você por: <span class="countdown-num" id="bonus-countdown">15:00</span></p></div>
-    <h2 class="secao-titulo">Escolha quanto você quer <span class="destaque">divulgar</span></h2>
-    <p class="secao-sub">Comece a lembrar seus clientes hoje mesmo</p>
-    <div class="planos-grid">
-      <div class="plano">
-        <div class="plano-header">
-          <h3>Plano Básico</h3>
-          <p class="plano-sub">Para testar: dá para divulgar por só alguns dias… e depois?</p>
-          <div class="plano-preco-box"><p class="plano-de">De R$67,00</p><p class="plano-valor">R$10</p><p class="plano-tipo">Pagamento único</p></div>
-        </div>
+<section class="section" id="planos">
+  <div class="wrap">
+    <div class="countdown" id="bonus-countdown-wrap"><span>⏳ Os 6 bônus estão reservados para você por:</span><span class="clock" id="bonus-countdown">15:00</span></div>
+    <p class="eyebrow center" style="text-align:center">Planos</p>
+    <h2 class="h2 center" style="margin-left:auto;margin-right:auto;text-align:center">Escolha quanto você quer <span>divulgar</span></h2>
+    <p class="lead center" style="margin-left:auto;margin-right:auto;text-align:center">Comece a lembrar seus clientes hoje mesmo</p>
+    <div class="plans">
+      <div class="plan">
+        <h3>Plano Básico</h3>
+        <p class="sub">Para testar: dá para divulgar por só alguns dias… e depois?</p>
+        <div class="price-box"><div class="de">De R$67,00</div><div class="val">R$10</div><div class="tipo">Pagamento único</div></div>
         <ul>
-          <li><span class="p-check"><svg viewBox="0 0 10 8" fill="none"><path d="M1 3.5L3.5 6.5L9 1" stroke="white" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>5 Vídeos Divulga Serviços</li>
-          <li><span class="p-check"><svg viewBox="0 0 10 8" fill="none"><path d="M1 3.5L3.5 6.5L9 1" stroke="white" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>10 Posts</li>
-          <li><span class="p-check"><svg viewBox="0 0 10 8" fill="none"><path d="M1 3.5L3.5 6.5L9 1" stroke="white" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>5 Stories</li>
-          <li><span class="p-check"><svg viewBox="0 0 10 8" fill="none"><path d="M1 3.5L3.5 6.5L9 1" stroke="white" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>10 Legendas</li>
+          <li>5 Vídeos Divulga Serviços</li>
+          <li>10 Posts</li>
+          <li>5 Stories</li>
+          <li>10 Legendas</li>
         </ul>
-        <a href="upsell.html" class="btn-cta" style="max-width:100%;">QUERO ESSA OPÇÃO</a>
+        <a href="upsell.html" class="btn">Quero essa opção</a>
       </div>
-      <div class="plano destaque">
-        <span class="plano-badge">MAIS ESCOLHIDO</span>
-        <div class="super-oferta-wrap"><img src="super_oferta.png" alt="Super Oferta" loading="lazy"></div>
-        <div class="plano-header">
-          <h3>Pacote Completo</h3>
-          <p class="plano-sub">Para divulgar todos os dias e não deixar mais nenhum cliente esquecer de você</p>
-          <div class="plano-preco-box"><p class="plano-valor">R$27,90</p><p class="plano-tipo">Pagamento único — acesso imediato</p></div>
-        </div>
+      <div class="plan featured">
+        <span class="badge">Mais escolhido</span>
+        <img class="selo-img" src="img/selo.webp" alt="Pacote Completo" loading="lazy">
+        <h3>Pacote Completo</h3>
+        <p class="sub">Para divulgar todos os dias e não deixar mais nenhum cliente esquecer de você</p>
+        <div class="price-box"><div class="val">R$27,90</div><div class="tipo">Pagamento único — acesso imediato</div></div>
         <ul>
-          <li><span class="p-check"><svg viewBox="0 0 10 8" fill="none"><path d="M1 3.5L3.5 6.5L9 1" stroke="white" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>🎥 +50 Vídeos Divulga Serviços</li>
-          <li><span class="p-check"><svg viewBox="0 0 10 8" fill="none"><path d="M1 3.5L3.5 6.5L9 1" stroke="white" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>+100 Posts editáveis</li>
-          <li><span class="p-check"><svg viewBox="0 0 10 8" fill="none"><path d="M1 3.5L3.5 6.5L9 1" stroke="white" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>Destaques para Bio no Instagram</li>
-          <li class="bonus-item"><span class="p-check"><svg viewBox="0 0 10 8" fill="none"><path d="M1 3.5L3.5 6.5L9 1" stroke="white" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>🎁 Bônus 1: Painel de Gestão Inteligente</li>
-          <li class="bonus-item"><span class="p-check"><svg viewBox="0 0 10 8" fill="none"><path d="M1 3.5L3.5 6.5L9 1" stroke="white" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>🎁 Bônus 2: Método Posts que Atrai Clientes</li>
-          <li class="bonus-item"><span class="p-check"><svg viewBox="0 0 10 8" fill="none"><path d="M1 3.5L3.5 6.5L9 1" stroke="white" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>🎁 Bônus 3: Fórmula Instagram que Vende</li>
-          <li class="bonus-item"><span class="p-check"><svg viewBox="0 0 10 8" fill="none"><path d="M1 3.5L3.5 6.5L9 1" stroke="white" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>🎁 Bônus 4: Protocolo de Atendimento</li>
-          <li class="bonus-item"><span class="p-check"><svg viewBox="0 0 10 8" fill="none"><path d="M1 3.5L3.5 6.5L9 1" stroke="white" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>🎁 Bônus 5: Biblioteca de Respostas WhatsApp</li>
-          <li class="bonus-item"><span class="p-check"><svg viewBox="0 0 10 8" fill="none"><path d="M1 3.5L3.5 6.5L9 1" stroke="white" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>🎁 Bônus 6: Sistema de Controle de Clientes</li>
+          <li>🎥 +50 Vídeos Divulga Serviços</li>
+          <li>+100 Posts editáveis</li>
+          <li>Destaques para Bio no Instagram</li>
+          <li>🎁 Bônus 1: Painel de Gestão Inteligente</li>
+          <li>🎁 Bônus 2: Método Posts que Atrai Clientes</li>
+          <li>🎁 Bônus 3: Fórmula Instagram que Vende</li>
+          <li>🎁 Bônus 4: Protocolo de Atendimento</li>
+          <li>🎁 Bônus 5: Biblioteca de Respostas WhatsApp</li>
+          <li>🎁 Bônus 6: Sistema de Controle de Clientes</li>
         </ul>
-        <a href="https://pay.kirvano.com/a838971a-7c4d-4812-bb9a-71a7b42068a3" class="btn-cta" style="max-width:100%;">QUERO O DIVULGA SERVIÇOS COMPLETO</a>
-        <div class="selo-seguranca"><span>✅ Compra 100% segura</span><span>⚡ Receba em menos de 2 minutos</span><span>✅ Pix seguro</span></div>
-        <p class="plano-rodape">Você não vai encontrar esse preço depois</p>
+        <a href="https://pay.kirvano.com/a838971a-7c4d-4812-bb9a-71a7b42068a3" class="btn">Quero o Divulga Serviços Completo</a>
+        <div class="safe"><span>✅ Compra 100% segura</span><span>⚡ Receba em menos de 2 minutos</span><span>✅ Pix seguro</span></div>
       </div>
     </div>
-    <p class="planos-nota">Menos que uma troca de óleo. E uma troca de óleo que volta já paga tudo.</p>
+    <p class="note">Menos que uma troca de óleo. E uma troca de óleo que volta já paga tudo.</p>
   </div>
 </section>
 
-<section class="secao bg-branco">
-  <div class="container">
-    <h2 class="secao-titulo" style="margin-bottom:32px;">Como Você <span class="destaque">Recebe</span>?</h2>
-    <div class="entrega-box">
-      <div class="entrega-icones"><div class="entrega-icone">📧</div><div class="entrega-icone">💬</div></div>
-      <div><h3>Email + WhatsApp</h3><p>Assim que o pagamento for confirmado, enviamos tudo direto para o seu email e WhatsApp. Acesso imediato, sem espera.</p></div>
+<section class="section paper">
+  <div class="wrap deliver">
+    <div class="deliver-box">
+      <h3>Email + WhatsApp</h3>
+      <p>Assim que o pagamento for confirmado, enviamos tudo direto para o seu email e WhatsApp. Acesso imediato, sem espera.</p>
     </div>
-  </div>
-</section>
-
-<section class="secao bg-cinza">
-  <div class="container">
-    <div class="garantia-box">
-      <img src="Garantia.webp" alt="Garantia de 7 dias" loading="lazy">
-      <h3>Risco Zero — Garantia de 7 Dias</h3>
+    <div class="garantia">
+      <img src="img/garantia.webp" alt="Garantia de 7 dias" loading="lazy" width="512" height="512">
+      <h3>Risco zero — 7 dias</h3>
       <p>Confiamos tanto no pacote que você tem 7 dias de garantia incondicional. Não gostou? Basta enviar um email e devolvemos 100% do seu dinheiro. Sem perguntas.</p>
+      <div class="center mt"><a href="#planos" class="btn" style="max-width:100%">Eu preciso comprar agora mesmo</a></div>
     </div>
-    <div class="text-center mt-32"><a href="#planos" class="btn-cta">EU PRECISO COMPRAR AGORA MESMO!</a></div>
   </div>
 </section>
 
-<section class="secao bg-branco">
-  <div class="container">
-    <h2 class="secao-titulo">Perguntas <span class="destaque">Frequentes</span></h2>
-    <p class="secao-sub">Tire suas dúvidas antes de garantir o seu pacote</p>
-    <div class="faq-lista">
-      <div class="faq-item"><button class="faq-pergunta" onclick="toggleFaq(this)">Preciso saber editar vídeo para usar?<span class="faq-icone">+</span></button><div class="faq-resposta">Não! Os vídeos já chegam prontos. Basta baixar e postar direto no Instagram, TikTok ou WhatsApp. Zero edição necessária.</div></div>
-      <div class="faq-item"><button class="faq-pergunta" onclick="toggleFaq(this)">Funciona para quem nunca usou redes sociais?<span class="faq-icone">+</span></button><div class="faq-resposta">Sim! O pacote foi criado justamente para quem não tem experiência em marketing digital. Todo o conteúdo é simples — você baixa, abre o aplicativo e posta.</div></div>
-      <div class="faq-item"><button class="faq-pergunta" onclick="toggleFaq(this)">Quanto tempo leva para receber?<span class="faq-icone">+</span></button><div class="faq-resposta">O acesso é imediato! Assim que o pagamento for confirmado, enviamos tudo direto para o seu email e WhatsApp. Em menos de 5 minutos você já pode começar a postar.</div></div>
-      <div class="faq-item"><button class="faq-pergunta" onclick="toggleFaq(this)">Os vídeos funcionam para qualquer cidade?<span class="faq-icone">+</span></button><div class="faq-resposta">Sim! Os vídeos Divulga Serviços não citam localização, então funcionam para qualquer cidade do Brasil. O algoritmo das redes entrega para pessoas da sua região automaticamente.</div></div>
-      <div class="faq-item"><button class="faq-pergunta" onclick="toggleFaq(this)">E se eu não gostar? Tem garantia?<span class="faq-icone">+</span></button><div class="faq-resposta">Sim! Você tem 7 dias de garantia incondicional. Se por qualquer motivo não ficar satisfeito, basta enviar um email e devolvemos 100% do seu dinheiro. Sem burocracia.</div></div>
-      <div class="faq-item"><button class="faq-pergunta" onclick="toggleFaq(this)">Os vídeos funcionam no TikTok, Instagram e WhatsApp?<span class="faq-icone">+</span></button><div class="faq-resposta">Sim! Todo o conteúdo está no formato ideal para Instagram Reels, TikTok, Facebook e WhatsApp Status. Um pacote para todas as suas redes.</div></div>
-      <div class="faq-item"><button class="faq-pergunta" onclick="toggleFaq(this)">Qual a diferença entre o Plano Básico e o Pacote Completo?<span class="faq-icone">+</span></button><div class="faq-resposta">O Plano Básico inclui 5 vídeos, 10 posts, 5 stories e 10 legendas — ideal para testar. O Pacote Completo tem +50 vídeos, +100 posts e todos os 6 bônus exclusivos, que sozinhos valeriam R$366.</div></div>
-      <div class="faq-item"><button class="faq-pergunta" onclick="toggleFaq(this)">Isso traz cliente mesmo?<span class="faq-icone">+</span></button><div class="faq-resposta">Os vídeos lembram o cliente do serviço que o carro precisa e convidam ele a chamar no seu WhatsApp. Quanto mais você posta, mais vezes sua oficina aparece para quem precisa.</div></div>
+<section class="section">
+  <div class="wrap">
+    <p class="eyebrow">FAQ</p>
+    <h2 class="h2">Perguntas <span>frequentes</span></h2>
+    <div class="faq">
+      <details><summary>Preciso saber editar vídeo para usar?</summary><div class="ans">Não! Os vídeos já chegam prontos. Basta baixar e postar direto no Instagram, TikTok ou WhatsApp. Zero edição necessária.</div></details>
+      <details><summary>Funciona para quem nunca usou redes sociais?</summary><div class="ans">Sim! O pacote foi criado justamente para quem não tem experiência em marketing digital. Todo o conteúdo é simples — você baixa, abre o aplicativo e posta.</div></details>
+      <details><summary>Quanto tempo leva para receber?</summary><div class="ans">O acesso é imediato! Assim que o pagamento for confirmado, enviamos tudo direto para o seu email e WhatsApp. Em menos de 5 minutos você já pode começar a postar.</div></details>
+      <details><summary>Os vídeos funcionam para qualquer cidade?</summary><div class="ans">Sim! Os vídeos Divulga Serviços não citam localização, então funcionam para qualquer cidade do Brasil. O algoritmo das redes entrega para pessoas da sua região automaticamente.</div></details>
+      <details><summary>E se eu não gostar? Tem garantia?</summary><div class="ans">Sim! Você tem 7 dias de garantia incondicional. Se por qualquer motivo não ficar satisfeito, basta enviar um email e devolvemos 100% do seu dinheiro. Sem burocracia.</div></details>
+      <details><summary>Os vídeos funcionam no TikTok, Instagram e WhatsApp?</summary><div class="ans">Sim! Todo o conteúdo está no formato ideal para Instagram Reels, TikTok, Facebook e WhatsApp Status. Um pacote para todas as suas redes.</div></details>
+      <details><summary>Qual a diferença entre o Plano Básico e o Pacote Completo?</summary><div class="ans">O Plano Básico inclui 5 vídeos, 10 posts, 5 stories e 10 legendas — ideal para testar. O Pacote Completo tem +50 vídeos, +100 posts e todos os 6 bônus exclusivos, que sozinhos valeriam R$366.</div></details>
+      <details><summary>Isso traz cliente mesmo?</summary><div class="ans">Os vídeos lembram o cliente do serviço que o carro precisa e convidam ele a chamar no seu WhatsApp. Quanto mais você posta, mais vezes sua oficina aparece para quem precisa.</div></details>
     </div>
-    <div class="text-center mt-32"><a href="#planos" class="btn-cta">👉 QUERO GARANTIR MEU PACOTE AGORA</a></div>
+    <div class="center mt"><a href="#planos" class="btn" style="max-width:380px">👉 Quero garantir meu pacote agora</a></div>
   </div>
 </section>
 
 <footer>
-  <p style="margin-bottom:8px;"><a href="https://trafego6em7.com/politica-de-privacidade" target="_blank" rel="noopener">Política de Privacidade</a> &nbsp;|&nbsp; <a href="https://trafego6em7.com/termos-de-uso/" target="_blank" rel="noopener">Termos de Uso</a></p>
+  <p style="margin-bottom:8px"><a href="https://trafego6em7.com/politica-de-privacidade" target="_blank" rel="noopener">Política de Privacidade</a> · <a href="https://trafego6em7.com/termos-de-uso/" target="_blank" rel="noopener">Termos de Uso</a></p>
   <p>© 2026 — Todos os direitos reservados.</p>
 </footer>
 
 <script>
-function ativarVideo(el){const frame=el.closest('.phone-frame');const iframe=frame.querySelector('iframe');iframe.style.pointerEvents='auto';el.style.display='none';}
-function toggleFaq(btn){const item=btn.closest('.faq-item');const aberto=item.classList.contains('aberto');document.querySelectorAll('.faq-item').forEach(i=>i.classList.remove('aberto'));if(!aberto)item.classList.add('aberto');}
+function ativarVideo(el){var f=el.closest('.reel-frame');var i=f.querySelector('iframe');i.style.pointerEvents='auto';el.style.display='none';}
 (function(){
   var KEY='bonus_inicio', DUR=15*60*1000;
   var el=document.getElementById('bonus-countdown');
-  var txt=document.getElementById('bonus-countdown-text');
-  if(!el||!txt) return;
-  var start;
-  try{ start=parseInt(localStorage.getItem(KEY),10); }catch(e){ start=NaN; }
-  if(!start||isNaN(start)){
-    start=Date.now();
-    try{ localStorage.setItem(KEY,String(start)); }catch(e){}
-  }
+  var wrap=document.getElementById('bonus-countdown-wrap');
+  if(!el||!wrap) return;
+  var start; try{ start=parseInt(localStorage.getItem(KEY),10);}catch(e){start=NaN;}
+  if(!start||isNaN(start)){ start=Date.now(); try{localStorage.setItem(KEY,String(start));}catch(e){} }
   function tick(){
     var left=DUR-(Date.now()-start);
-    if(left<=0){
-      txt.textContent='O tempo acabou, mas ainda dá para garantir. Não deixe para depois.';
-      return;
-    }
-    var m=Math.floor(left/60000);
-    var s=Math.floor((left%60000)/1000);
+    if(left<=0){ wrap.textContent='O tempo acabou, mas ainda dá para garantir. Não deixe para depois.'; return; }
+    var m=Math.floor(left/60000), s=Math.floor((left%60000)/1000);
     el.textContent=(m<10?'0':'')+m+':'+(s<10?'0':'')+s;
     setTimeout(tick,250);
   }
@@ -432,43 +422,20 @@ function toggleFaq(btn){const item=btn.closest('.faq-item');const aberto=item.cl
 <script>!function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,document,'script','https://connect.facebook.net/en_US/fbevents.js');fbq('init','843796278012844');fbq('track','PageView');</script>
 <noscript><img height="1" width="1" style="display:none" src="https://www.facebook.com/tr?id=843796278012844&ev=PageView&noscript=1"/></noscript>
 <script src="https://cdn.utmify.com.br/scripts/utms/latest.js" data-utmify-prevent-xcod-sck data-utmify-prevent-subids async defer></script>
-<!-- EXIT-POPUP:START -->
-<style>
-.xp-ov{position:fixed;inset:0;z-index:10000;display:none;align-items:center;justify-content:center;padding:16px;background:rgba(0,0,0,.72);-webkit-backdrop-filter:blur(3px);backdrop-filter:blur(3px)}
-.xp-ov.xp-on{display:flex;animation:xp-fade .2s ease-out}
-.xp-box{position:relative;width:100%;max-width:440px;max-height:calc(100vh - 32px);overflow:auto;background:#ffffff;color:#111827;border:1px solid #E5E7EB;border-radius:18px;padding:30px 24px 22px;text-align:center;box-shadow:0 24px 70px rgba(0,0,0,.45);font-family:'Inter',system-ui,sans-serif;animation:xp-pop .25s ease-out}
-.xp-x{position:absolute;top:8px;right:10px;width:36px;height:36px;border:0;background:none;color:#6B7280;font-size:26px;line-height:1;cursor:pointer;border-radius:8px}
-.xp-x:hover{color:#111827}
-.xp-tag{display:inline-block;background:#DC2626;color:#ffffff;font-family:'Montserrat',system-ui,sans-serif;font-weight:800;font-size:11px;letter-spacing:1.2px;text-transform:uppercase;padding:5px 14px;border-radius:999px;margin-bottom:14px}
-.xp-tt{font-family:'Montserrat',system-ui,sans-serif;font-weight:900;font-size:clamp(22px,6vw,27px);line-height:1.15;margin:0 0 8px;color:#111827}
-.xp-sub{font-size:14.5px;line-height:1.45;color:#6B7280;margin:0 0 16px}
-.xp-list{list-style:none;margin:0 0 16px;padding:0;text-align:left;display:grid;gap:8px}
-.xp-list li{display:flex;align-items:center;gap:12px;padding:11px 14px;border:1px solid #DC2626;border-radius:12px;background:rgba(0,0,0,.03);font-weight:700;font-size:14.5px;color:#111827}
-.xp-list b{font-size:22px;line-height:1}
-.xp-list em{margin-left:auto;font-style:normal;font-size:10.5px;font-weight:800;letter-spacing:.6px;text-transform:uppercase;color:#111827;opacity:0.6;white-space:nowrap}
-.xp-cta{display:block;background:#DC2626;color:#ffffff!important;font-family:'Montserrat',system-ui,sans-serif;font-weight:800;font-size:15px;line-height:1.25;padding:17px 18px;border-radius:12px;text-decoration:none;transition:background .15s,transform .15s}
-.xp-cta:hover{background:#bb2020;transform:translateY(-2px)}
-.xp-no{margin-top:12px;background:none;border:0;color:#6B7280;font-size:12.5px;text-decoration:underline;cursor:pointer}
-.xp-safe{margin:12px 0 0;font-size:11.5px;color:#6B7280}
-@keyframes xp-fade{from{opacity:0}to{opacity:1}}
-@keyframes xp-pop{from{opacity:0;transform:translateY(14px) scale(.97)}to{opacity:1;transform:none}}
-@media(max-width:380px){.xp-list li{font-size:13.5px;padding:10px 11px}.xp-list em{display:none}}
-@media(prefers-reduced-motion:reduce){.xp-ov.xp-on,.xp-box{animation:none}}
-</style>
 <div class="xp-ov" id="xp-ov" role="dialog" aria-modal="true" aria-labelledby="xp-tt" aria-hidden="true">
   <div class="xp-box">
     <button type="button" class="xp-x" id="xp-x" aria-label="Fechar">&times;</button>
     <span class="xp-tag">🎁 Presente antes de você ir</span>
-    <h2 class="xp-tt" id="xp-tt">Espere! Leve mais 3 bônus de presente</h2>
+    <h2 class="xp-tt" id="xp-tt">Espere! Leve mais 3 bônus</h2>
     <p class="xp-sub">Garanta o <strong>Pacote Completo</strong> agora e receba também, sem pagar nada a mais:</p>
     <ul class="xp-list">
       <li><b>🧮</b>Calculadora de Preços e Lucro<em>Grátis</em></li>
       <li><b>👥</b>Controle de Clientes e Retornos<em>Grátis</em></li>
       <li><b>📄</b>Gerador de Orçamentos<em>Grátis</em></li>
     </ul>
-    <a href="https://pay.kirvano.com/a838971a-7c4d-4812-bb9a-71a7b42068a3" class="xp-cta" id="xp-cta">SIM! QUERO O PACOTE COMPLETO + OS 3 BÔNUS</a>
+    <a href="https://pay.kirvano.com/a838971a-7c4d-4812-bb9a-71a7b42068a3" class="xp-cta" id="xp-cta">Sim! Quero o pacote completo + os 3 bônus</a>
     <button type="button" class="xp-no" id="xp-no">Não, obrigado</button>
-    <p class="xp-safe">✅ Compra 100% segura &nbsp;•&nbsp; 7 dias de garantia</p>
+    <p class="xp-safe">✅ Compra 100% segura · 7 dias de garantia</p>
   </div>
 </div>
 <script>
@@ -477,45 +444,16 @@ function toggleFaq(btn){const item=btn.closest('.faq-item');const aberto=item.cl
   var KEY='xp_exit_shown', armed=false, shown=false, lastFocus=null;
   try{ if(sessionStorage.getItem(KEY)) shown=true; }catch(e){}
   var touch=('ontouchstart' in window)||navigator.maxTouchPoints>0;
-
-  function open(){
-    if(shown) return; shown=true;
-    try{ sessionStorage.setItem(KEY,'1'); }catch(e){}
-    lastFocus=document.activeElement;
-    ov.classList.add('xp-on'); ov.setAttribute('aria-hidden','false');
-    document.documentElement.style.overflow='hidden';
-    var b=document.getElementById('xp-cta'); if(b) b.focus({preventScroll:true});
-  }
-  function close(){
-    ov.classList.remove('xp-on'); ov.setAttribute('aria-hidden','true');
-    document.documentElement.style.overflow='';
-    if(lastFocus&&lastFocus.focus) try{lastFocus.focus({preventScroll:true});}catch(e){}
-  }
+  function open(){ if(shown) return; shown=true; try{sessionStorage.setItem(KEY,'1');}catch(e){} lastFocus=document.activeElement; ov.classList.add('xp-on'); ov.setAttribute('aria-hidden','false'); document.documentElement.style.overflow='hidden'; var b=document.getElementById('xp-cta'); if(b) b.focus({preventScroll:true}); }
+  function close(){ ov.classList.remove('xp-on'); ov.setAttribute('aria-hidden','true'); document.documentElement.style.overflow=''; if(lastFocus&&lastFocus.focus) try{lastFocus.focus({preventScroll:true});}catch(e){} }
   ov.addEventListener('click',function(e){ if(e.target===ov) close(); });
   document.getElementById('xp-x').addEventListener('click',close);
   document.getElementById('xp-no').addEventListener('click',close);
   document.addEventListener('keydown',function(e){ if(e.key==='Escape'&&ov.classList.contains('xp-on')) close(); });
-  document.addEventListener('click',function(e){
-    var a=e.target.closest&&e.target.closest('a[href*="/checkout/"],a[href*="kirvano.com"]');
-    if(a) shown=true;
-  },true);
-
-  setTimeout(function(){
-    armed=true;
-    if(touch&&!shown){
-      try{
-        history.pushState({xp:1},'',location.href);
-        window.addEventListener('popstate',function(){
-          if(!shown) open();
-        });
-      }catch(e){}
-    }
-  },8000);
-  document.addEventListener('mouseout',function(e){
-    if(armed&&!touch&&!e.relatedTarget&&e.clientY<=0) open();
-  });
+  document.addEventListener('click',function(e){ var a=e.target.closest&&e.target.closest('a[href*="/checkout/"],a[href*="kirvano.com"]'); if(a) shown=true; },true);
+  setTimeout(function(){ armed=true; if(touch&&!shown){ try{ history.pushState({xp:1},'',location.href); window.addEventListener('popstate',function(){ if(!shown) open(); }); }catch(e){} } },8000);
+  document.addEventListener('mouseout',function(e){ if(armed&&!touch&&!e.relatedTarget&&e.clientY<=0) open(); });
 })();
 </script>
-<!-- EXIT-POPUP:END -->
 </body>
 </html>

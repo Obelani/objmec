@@ -1,121 +1,70 @@
-
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Espera! Oferta Especial — Mecânicos</title>
+<title>Oferta especial — Divulga Serviços Completo</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link rel="preload" as="style" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800;900&family=Inter:wght@400;500;600&display=swap" onload="this.onload=null;this.rel='stylesheet'">
-<noscript><link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700;800;900&family=Inter:wght@400;500;600&display=swap"></noscript>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
-:root{
-  --verde:#DC2626;--verde-hover:#B91C1C;--verde-claro:#FEF2F2;--verde-medio:#FEE2E2;
-  --preto:#111827;--cinza-texto:#6B7280;--cinza-fundo:#F9FAFB;
-  --branco:#FFFFFF;--verde-ok:#16A34A;--verde-ok-claro:#DCFCE7;
-  --vermelho:#DC2626;--borda:#E5E7EB;
-}
+:root{--ink:#0B1C2C;--amber:#F59E0B;--amber-deep:#D97706;--amber-soft:#FEF3C7;--stone:#F5F1EB;--paper:#FFFcf8;--muted:#6B7280;--line:#E7E0D5;--white:#fff}
 html{scroll-behavior:smooth}
-body{font-family:'Inter',sans-serif;background:var(--branco);color:var(--preto);line-height:1.6;overflow-x:hidden}
-h1,h2,h3,h4{font-family:'Montserrat',sans-serif;line-height:1.15}
+body{font-family:'Plus Jakarta Sans',system-ui,sans-serif;background:var(--stone);color:var(--ink);line-height:1.6;overflow-x:hidden}
+h1,h2,h3{font-family:'Barlow Condensed',sans-serif;line-height:1.05;letter-spacing:.02em;text-transform:uppercase}
 img{max-width:100%;height:auto;display:block}
 a{text-decoration:none;color:inherit}
-.container{max-width:720px;margin:0 auto;padding:0 20px}
-.topo-urgencia{background:var(--vermelho);color:var(--branco);text-align:center;padding:14px 20px;font-family:'Montserrat',sans-serif;font-weight:800;font-size:clamp(13px,3vw,16px);animation:pulsar 2s infinite}
-@keyframes pulsar{0%,100%{opacity:1}50%{opacity:0.85}}
-.badge-desconto{background:var(--verde);color:var(--branco);display:inline-block;font-family:'Montserrat',sans-serif;font-weight:900;font-size:11px;letter-spacing:2px;text-transform:uppercase;padding:6px 20px;border-radius:999px;margin-bottom:16px;animation:entrar 0.6s ease-out}
-@keyframes entrar{from{transform:translateY(-20px);opacity:0}to{transform:translateY(0);opacity:1}}
-.hero{padding:48px 20px 0;text-align:center;background:var(--branco);border-bottom:1px solid var(--borda)}
-.hero h1{font-size:clamp(26px,5vw,42px);font-weight:900;color:var(--preto);max-width:640px;margin:0 auto 12px}
-.hero h1 .destaque{color:var(--verde)}
-.hero h1 .destaque-vermelho{color:var(--vermelho)}
-.hero-sub{font-size:clamp(15px,2vw,18px);color:var(--cinza-texto);max-width:560px;margin:0 auto 32px;line-height:1.7}
-.banner-wrap{max-width:500px;margin:0 auto}
-.banner-wrap img{width:100%;border-radius:12px 12px 0 0;border:1px solid var(--borda);border-bottom:none}
-.preco-faixa{background:var(--preto);border-radius:0 0 12px 12px;padding:28px 24px 32px;text-align:center;max-width:500px;margin:0 auto 48px;color:var(--branco)}
-.preco-faixa .de{font-size:16px;font-weight:600;text-decoration:line-through;color:rgba(255,255,255,0.4);margin-bottom:4px}
-.preco-faixa .por-label{font-size:14px;color:rgba(255,255,255,0.7);font-weight:500;margin-bottom:4px}
-.preco-faixa .valor{font-family:'Montserrat',sans-serif;font-weight:900;font-size:clamp(56px,12vw,88px);color:var(--verde);line-height:1;margin-bottom:8px}
-.preco-faixa .valor sup{font-size:28px;vertical-align:super}
-.preco-faixa .economia-pill{display:inline-block;background:var(--verde-ok-claro);color:#166534;font-size:13px;font-weight:700;padding:5px 16px;border-radius:999px;margin-bottom:24px}
-.btn-sim{display:block;width:100%;background:var(--verde);color:var(--branco);font-family:'Montserrat',sans-serif;font-weight:900;font-size:clamp(14px,3vw,18px);padding:20px 24px;border-radius:10px;border:none;cursor:pointer;text-align:center;transition:background 0.15s,transform 0.15s;animation:pulsar-btn 2.5s infinite;line-height:1.3}
-.btn-sim:hover{background:var(--verde-hover);transform:scale(1.02)}
-@keyframes pulsar-btn{0%,100%{box-shadow:0 0 0 0 rgba(220,38,38,0.5)}50%{box-shadow:0 0 0 10px rgba(220,38,38,0)}}
-.btn-nao{display:block;text-align:center;margin-top:14px;font-size:13px;color:rgba(255,255,255,0.5);text-decoration:underline;cursor:pointer}
-.btn-nao:hover{color:rgba(255,255,255,0.8)}
-.secao{padding:56px 20px;border-top:1px solid var(--borda)}
-.secao.bg-cinza{background:var(--cinza-fundo)}
-.secao.bg-verde-claro{background:var(--verde-claro)}
-.secao.bg-branco{background:var(--branco)}
-.secao-titulo{font-family:'Montserrat',sans-serif;font-weight:900;font-size:clamp(20px,4vw,30px);text-align:center;margin-bottom:8px;color:var(--preto)}
-.secao-titulo .destaque{color:var(--verde)}
-.secao-sub{text-align:center;color:var(--cinza-texto);font-size:clamp(13px,2vw,15px);margin-bottom:36px;max-width:500px;margin-left:auto;margin-right:auto}
-.itens-lista{list-style:none;display:flex;flex-direction:column;gap:12px}
-.item{display:flex;align-items:flex-start;gap:14px;background:var(--branco);border:1px solid var(--borda);border-radius:12px;padding:16px 18px;transition:border-color 0.2s,box-shadow 0.2s}
-.item:hover{border-color:var(--verde);box-shadow:0 2px 12px rgba(220,38,38,0.06)}
-.item-check{flex-shrink:0;width:24px;height:24px;background:var(--verde);border-radius:50%;display:flex;align-items:center;justify-content:center;margin-top:1px}
-.item-check svg{width:12px;height:12px}
-.item-titulo{font-weight:700;color:var(--verde);font-size:14px;margin-bottom:2px}
-.item-desc{font-size:13px;color:var(--cinza-texto);line-height:1.5}
-.comparativo{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:8px}
-@media(max-width:480px){.comparativo{grid-template-columns:1fr;gap:12px}}
-.comp-card{border-radius:14px;padding:24px 20px;text-align:center}
-.comp-card.basico{background:var(--cinza-fundo);border:1px solid var(--borda);opacity:0.7}
-.comp-card.completo{background:var(--preto);border:2px solid var(--verde);position:relative}
-.comp-badge{position:absolute;top:-14px;left:50%;transform:translateX(-50%);background:var(--verde);color:var(--branco);font-family:'Montserrat',sans-serif;font-weight:800;font-size:11px;letter-spacing:1px;text-transform:uppercase;padding:4px 16px;border-radius:999px;white-space:nowrap}
-.comp-titulo{font-family:'Montserrat',sans-serif;font-weight:800;font-size:13px;text-transform:uppercase;letter-spacing:0.5px;margin-bottom:12px}
-.comp-card.basico .comp-titulo{color:var(--cinza-texto)}
-.comp-card.completo .comp-titulo{color:rgba(255,255,255,0.7)}
-.comp-valor{font-family:'Montserrat',sans-serif;font-weight:900;font-size:38px;line-height:1}
-.comp-card.basico .comp-valor{color:var(--preto)}
-.comp-card.completo .comp-valor{color:var(--verde)}
-.comp-descricao{font-size:12px;margin-top:6px}
-.comp-card.basico .comp-descricao{color:var(--cinza-texto)}
-.comp-card.completo .comp-descricao{color:rgba(255,255,255,0.6)}
-.comp-itens{list-style:none;margin-top:14px;display:flex;flex-direction:column;gap:6px;text-align:left}
-.comp-item{display:flex;align-items:center;gap:8px;font-size:12px}
-.comp-card.basico .comp-item{color:var(--cinza-texto)}
-.comp-card.completo .comp-item{color:rgba(255,255,255,0.9)}
-.comp-dot{flex-shrink:0;width:16px;height:16px;border-radius:50%;display:flex;align-items:center;justify-content:center}
-.comp-card.basico .comp-dot{background:#D1D5DB}
-.comp-card.completo .comp-dot{background:var(--verde)}
-.comp-dot svg{width:8px;height:8px}
-.comp-x{color:#9CA3AF;font-weight:700;font-size:14px}
-.depo-destaque{background:var(--verde-claro);border:1px solid var(--verde-medio);border-left:4px solid var(--verde);border-radius:0 12px 12px 0;padding:20px 24px;margin-bottom:12px}
-.depo-texto{font-size:15px;color:var(--preto);line-height:1.7;font-style:italic;margin-bottom:10px}
-.depo-autor{font-size:13px;font-weight:700;color:var(--verde)}
-.garantia-box{background:var(--branco);border:2px solid var(--verde-medio);border-radius:14px;padding:32px 28px;text-align:center;max-width:500px;margin:0 auto}
-.garantia-box img{max-width:120px;margin:0 auto 16px}
-.garantia-box h3{font-size:20px;font-weight:900;color:var(--verde);margin-bottom:10px}
-.garantia-box p{font-size:14px;color:var(--cinza-texto);line-height:1.7;max-width:380px;margin:0 auto}
-.cta-final{background:var(--preto);padding:56px 20px;text-align:center}
-.cta-final h2{font-size:clamp(20px,4vw,30px);font-weight:900;color:var(--branco);max-width:560px;margin:0 auto 8px}
-.cta-final p{font-size:15px;color:rgba(255,255,255,0.7);margin-bottom:28px;max-width:440px;margin-left:auto;margin-right:auto}
-.cta-final .preco-mini .de{font-size:14px;color:rgba(255,255,255,0.4);text-decoration:line-through;margin-bottom:2px}
-.cta-final .preco-mini .valor{font-family:'Montserrat',sans-serif;font-weight:900;font-size:clamp(44px,10vw,68px);color:var(--verde);line-height:1;margin-bottom:20px}
-.cta-final .preco-mini .valor sup{font-size:22px;vertical-align:super}
-.timer-wrap{display:flex;align-items:center;justify-content:center;gap:8px;margin-bottom:24px;flex-wrap:wrap}
-.timer-label{font-size:13px;color:rgba(255,255,255,0.7);font-weight:500}
-.timer{display:flex;gap:6px;align-items:center}
-.timer-bloco{background:rgba(220,38,38,0.15);border:1px solid rgba(220,38,38,0.3);border-radius:8px;padding:6px 12px;text-align:center;min-width:52px}
-.timer-num{font-family:'Montserrat',sans-serif;font-weight:900;font-size:24px;color:var(--verde);line-height:1}
-.timer-sub{font-size:10px;color:rgba(255,255,255,0.5);text-transform:uppercase;letter-spacing:0.5px}
-.timer-sep{font-size:20px;font-weight:900;color:var(--verde);margin-top:-4px}
-.btn-sim-final{display:block;width:100%;max-width:520px;margin:0 auto;background:var(--verde);color:var(--branco);font-family:'Montserrat',sans-serif;font-weight:900;font-size:clamp(14px,3vw,18px);padding:20px 24px;border-radius:10px;border:none;cursor:pointer;text-align:center;transition:background 0.15s,transform 0.15s;animation:pulsar-btn 2.5s infinite;line-height:1.3}
-.btn-sim-final:hover{background:var(--verde-hover);transform:scale(1.02)}
-.btn-nao-final{display:block;text-align:center;margin-top:14px;font-size:13px;color:rgba(255,255,255,0.5);text-decoration:underline;cursor:pointer}
-.btn-nao-final:hover{color:rgba(255,255,255,0.8)}
-footer{border-top:1px solid var(--borda);padding:20px;text-align:center;color:var(--cinza-texto);font-size:12px;background:var(--cinza-fundo)}
-footer a{color:var(--verde);text-decoration:underline}
-@media(max-width:640px){.secao{padding:40px 16px}.hero{padding:36px 16px 0}.cta-final{padding:40px 16px}}
-
-/* Paleta 10: preto + amarelo + branco */
-.btn-cta.verde,.btn-sim,.btn-sim-final{color:#111827!important}
-.nicho-badge,.plano-badge,.check-icon,.item-check,.p-check,.v-check,.passo-numero{color:#111827}
+.wrap{max-width:720px;margin:0 auto;padding:0 20px}
+.topbar{background:var(--ink);color:var(--amber-soft);text-align:center;padding:12px 16px;font-weight:700;font-size:13px;border-bottom:3px solid var(--amber);position:sticky;top:0;z-index:40}
+.topbar b{color:var(--amber)}
+.hero{background:linear-gradient(160deg,#0B1C2C,#16324A);color:#fff;padding:40px 0 0;text-align:center}
+.kicker{display:inline-block;background:rgba(245,158,11,.15);border:1px solid rgba(245,158,11,.45);color:var(--amber);font-size:11px;font-weight:800;letter-spacing:.1em;text-transform:uppercase;padding:6px 12px;border-radius:999px;margin-bottom:14px}
+.hero h1{font-size:clamp(28px,6vw,40px);margin:0 auto 12px;max-width:620px}
+.hero h1 em{font-style:normal;color:var(--amber)}
+.hero p{color:#B7C4D0;max-width:520px;margin:0 auto 22px;font-size:15px}
+.hero-img{max-width:420px;margin:0 auto;border-radius:16px 16px 0 0;overflow:hidden;border:1px solid rgba(255,255,255,.12);border-bottom:0}
+.hero-img img{width:100%}
+.price{background:#071018;color:#fff;padding:28px 20px 36px;text-align:center;border-radius:0 0 16px 16px;max-width:420px;margin:0 auto 40px;border:1px solid rgba(245,158,11,.35);border-top:0}
+.price .de{text-decoration:line-through;color:#8FA0B0;font-size:14px}
+.price .val{font-family:'Barlow Condensed',sans-serif;font-size:72px;font-weight:800;color:var(--amber);line-height:1}
+.price .pill{display:inline-block;background:rgba(245,158,11,.15);color:var(--amber);font-size:12px;font-weight:700;padding:5px 12px;border-radius:999px;margin:10px 0 18px}
+.btn{display:block;width:100%;background:var(--amber);color:var(--ink);font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:18px;letter-spacing:.03em;text-transform:uppercase;padding:16px;border-radius:10px;text-align:center}
+.btn:hover{background:#FBBF24}
+.btn-no{display:block;margin-top:12px;color:#8FA0B0;font-size:13px;text-decoration:underline;text-align:center}
+.section{padding:48px 0}
+.section.paper{background:var(--paper)}
+.h2{font-size:clamp(24px,5vw,34px);margin-bottom:8px;text-align:center}
+.h2 span{color:var(--amber-deep)}
+.sub{text-align:center;color:var(--muted);margin-bottom:28px;font-size:14px}
+.comp{display:grid;grid-template-columns:1fr 1fr;gap:12px}
+@media(max-width:520px){.comp{grid-template-columns:1fr}}
+.card{border-radius:16px;padding:20px;border:1px solid var(--line);background:#fff}
+.card.pro{background:var(--ink);color:#fff;border-color:var(--amber);position:relative}
+.card .badge{position:absolute;top:-11px;left:50%;transform:translateX(-50%);background:var(--amber);color:var(--ink);font-family:'Barlow Condensed',sans-serif;font-size:12px;font-weight:800;padding:4px 12px;border-radius:999px;white-space:nowrap}
+.card h3{font-size:16px;margin-bottom:8px;text-align:center}
+.card .v{font-family:'Barlow Condensed',sans-serif;font-size:36px;text-align:center;color:var(--amber-deep)}
+.card.pro .v{color:var(--amber)}
+.card ul{list-style:none;margin-top:12px;display:grid;gap:6px;font-size:13px}
+.list{display:grid;gap:10px}
+.item{display:flex;gap:12px;background:#fff;border:1px solid var(--line);border-radius:12px;padding:14px}
+.item b{display:block;font-size:14px;color:var(--ink)}
+.item span{font-size:12.5px;color:var(--muted)}
+.ico{width:34px;height:34px;border-radius:8px;background:var(--ink);color:var(--amber);display:grid;place-items:center;flex-shrink:0}
+.garantia{background:#fff;border:1px solid var(--line);border-radius:16px;padding:28px;text-align:center;max-width:480px;margin:0 auto}
+.garantia img{width:120px;margin:0 auto 12px}
+.cta{background:var(--ink);color:#fff;padding:48px 20px;text-align:center}
+.cta h2{font-size:clamp(24px,5vw,34px);margin-bottom:8px}
+.cta p{color:#A8B6C3;margin-bottom:18px}
+.timer{display:inline-flex;gap:8px;align-items:center;margin-bottom:18px}
+.timer .box{background:rgba(245,158,11,.12);border:1px solid rgba(245,158,11,.35);border-radius:8px;padding:8px 12px;min-width:56px}
+.timer .n{font-family:'Barlow Condensed',sans-serif;font-size:28px;color:var(--amber);line-height:1}
+.timer .l{font-size:10px;color:#8FA0B0;text-transform:uppercase}
+footer{padding:20px;text-align:center;font-size:12px;color:var(--muted);background:var(--stone)}
+footer a{color:var(--amber-deep);text-decoration:underline}
+.note{text-align:center;font-size:13px;color:var(--muted);margin-top:14px}
+.valorbox{background:var(--amber-soft);border:1px solid #FDE68A;border-radius:12px;padding:18px;text-align:center;margin-top:24px}
 </style>
-<!-- Kirvano: repassa os parametros da URL (UTM) para os links de checkout -->
 <script>
 window.addEventListener('load',function(){
   var qs=document.location.search.replace('?','');
@@ -128,120 +77,102 @@ window.addEventListener('load',function(){
 </script>
 </head>
 <body>
-<div class="topo-urgencia">🚨 ATENÇÃO! Esta oferta expira em <span id="timer-topo">15:00</span> — Não perca!</div>
+<div class="topbar">🚨 Esta oferta expira em <b id="timer-topo">15:00</b> — não feche a página</div>
 <section class="hero">
-  <div class="container">
-    <span class="badge-desconto">🔥 Desconto Especial Liberado Agora</span>
-    <p style="font-family:'Montserrat',sans-serif;font-size:clamp(14px,2.5vw,18px);font-weight:600;color:var(--cinza-texto);margin-bottom:12px;text-transform:uppercase;letter-spacing:1px;">⚠️ Espera! Não feche essa página...</p>
-    <h1>Você está deixando para trás o <span class="destaque">Pacote Completo</span> por um preço <span class="destaque-vermelho">que nunca mais vai aparecer</span></h1>
-    <p class="hero-sub">Só quem chegou até aqui recebe essa oferta exclusiva. Assim que você sair dessa página, esse preço some para sempre.</p>
-    <div class="banner-wrap"><img src="banner_1.webp" alt="Pacote Completo para Oficinas Mecânicas" loading="lazy"></div>
+  <div class="wrap">
+    <span class="kicker">Desconto liberado só aqui</span>
+    <h1>Você está deixando para trás o <em>Pacote Completo</em> por um preço que não volta</h1>
+    <p>Só quem chegou até aqui recebe essa oferta. Assim que sair da página, o preço some.</p>
+    <div class="hero-img"><img src="img/mockup.webp" alt="Divulga Serviços — pacote completo" loading="eager"></div>
   </div>
-  <div class="preco-faixa">
+  <div class="price">
     <p class="de">De R$27,90</p>
-    <p class="por-label">Por apenas</p>
-    <div class="valor"><sup>R$</sup>19,90</div>
-    <span class="economia-pill">✓ Você economiza R$8,00 agora</span><br>
-    <a href="https://pay.kirvano.com/5a405eb5-7e64-455b-b52b-617a6cc97d07" class="btn-sim">✅ SIM! QUERO O PACOTE COMPLETO POR R$19,90</a>
-    <a href="https://pay.kirvano.com/ddaf5eca-2485-4e56-bfca-6d3620744aff" class="btn-nao">Não, prefiro ficar só com o básico de R$10</a>
+    <div class="val">R$19,90</div>
+    <div class="pill">✓ Você economiza R$8,00 agora</div>
+    <a href="https://pay.kirvano.com/5a405eb5-7e64-455b-b52b-617a6cc97d07" class="btn">✅ Sim! Quero o pacote completo por R$19,90</a>
+    <a href="https://pay.kirvano.com/ddaf5eca-2485-4e56-bfca-6d3620744aff" class="btn-no">Não, prefiro ficar só com o básico de R$10</a>
   </div>
 </section>
 
-<section class="secao bg-cinza">
-  <div class="container">
-    <h2 class="secao-titulo">Veja a <span class="destaque">Diferença</span></h2>
-    <p class="secao-sub">O que você leva em cada opção — e por que o completo vale muito mais</p>
-    <div class="comparativo">
-      <div class="comp-card basico">
-        <p class="comp-titulo">Plano Básico</p><p class="comp-valor">R$10</p><p class="comp-descricao">O que você escolheu</p>
-        <ul class="comp-itens">
-          <li class="comp-item"><span class="comp-dot"><svg viewBox="0 0 10 8" fill="none"><path d="M1 3.5L3.5 6.5L9 1" stroke="#6B7280" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>5 vídeos</li>
-          <li class="comp-item"><span class="comp-dot"><svg viewBox="0 0 10 8" fill="none"><path d="M1 3.5L3.5 6.5L9 1" stroke="#6B7280" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>10 posts</li>
-          <li class="comp-item"><span class="comp-x">✗</span> Sem bônus</li>
-          <li class="comp-item"><span class="comp-x">✗</span> Conteúdo limitado</li>
+<section class="section">
+  <div class="wrap">
+    <h2 class="h2">Veja a <span>diferença</span></h2>
+    <p class="sub">O que você leva em cada opção</p>
+    <div class="comp">
+      <div class="card">
+        <h3>Plano Básico</h3>
+        <div class="v">R$10</div>
+        <ul>
+          <li>5 vídeos</li>
+          <li>10 posts</li>
+          <li>✗ Sem bônus</li>
+          <li>✗ Conteúdo limitado</li>
         </ul>
       </div>
-      <div class="comp-card completo">
-        <span class="comp-badge">⭐ MELHOR ESCOLHA</span>
-        <p class="comp-titulo">Pacote Completo</p><p class="comp-valor">R$19,90</p><p class="comp-descricao">Oferta exclusiva desta página</p>
-        <ul class="comp-itens">
-          <li class="comp-item"><span class="comp-dot"><svg viewBox="0 0 10 8" fill="none"><path d="M1 3.5L3.5 6.5L9 1" stroke="white" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>+50 vídeos</li>
-          <li class="comp-item"><span class="comp-dot"><svg viewBox="0 0 10 8" fill="none"><path d="M1 3.5L3.5 6.5L9 1" stroke="white" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>+100 posts</li>
-          <li class="comp-item"><span class="comp-dot"><svg viewBox="0 0 10 8" fill="none"><path d="M1 3.5L3.5 6.5L9 1" stroke="white" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>6 bônus exclusivos</li>
-          <li class="comp-item"><span class="comp-dot"><svg viewBox="0 0 10 8" fill="none"><path d="M1 3.5L3.5 6.5L9 1" stroke="white" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"/></svg></span>R$366 em bônus grátis</li>
+      <div class="card pro">
+        <span class="badge">Melhor escolha</span>
+        <h3>Pacote Completo</h3>
+        <div class="v">R$19,90</div>
+        <ul>
+          <li>+50 vídeos</li>
+          <li>+100 posts</li>
+          <li>6 bônus exclusivos</li>
+          <li>R$366 em bônus grátis</li>
         </ul>
       </div>
     </div>
-    <p style="text-align:center;font-size:13px;color:var(--cinza-texto);margin-top:16px;">💡 Por apenas <strong style="color:var(--verde);">R$9,90 a mais</strong> você leva 6x mais conteúdo + R$366 em bônus.</p>
+    <p class="note">💡 Por apenas <strong style="color:var(--amber-deep)">R$9,90 a mais</strong> você leva 6x mais conteúdo + R$366 em bônus.</p>
   </div>
 </section>
 
-<section class="secao bg-branco">
-  <div class="container">
-    <h2 class="secao-titulo">Tudo Que Você <span class="destaque">Recebe</span> no Completo</h2>
-    <p class="secao-sub">Conteúdo criado para atrair mais clientes para sua oficina</p>
-    <ul class="itens-lista">
-<li class="item"><span class="item-check"></span><div><div class="item-titulo">🎥 +50 Vídeos Divulga Serviços para Oficinas</div><div class="item-desc">Formatos prontos para Instagram, TikTok e WhatsApp.</div></div></li>
-<li class="item"><span class="item-check"></span><div><div class="item-titulo">🖼️ +100 Posts Editáveis</div><div class="item-desc">Conteúdo visual pronto para usar hoje.</div></div></li>
-<li class="item"><span class="item-check"></span><div><div class="item-titulo">🔧 Chave de boca</div><div class="item-desc">Está sempre pronta para apertar e soltar qualquer problema.</div></div></li>
-<li class="item"><span class="item-check"></span><div><div class="item-titulo">🔩 Parafuso</div><div class="item-desc">Quando fica frouxo, o carro começa a fazer barulho.</div></div></li>
-<li class="item"><span class="item-check"></span><div><div class="item-titulo">🔋 Bateria</div><div class="item-desc">Sem energia o carro não vai a lugar nenhum.</div></div></li>
-<li class="item"><span class="item-check"></span><div><div class="item-titulo">🛢️ Óleo do motor</div><div class="item-desc">Precisa ser trocado no prazo para proteger o motor.</div></div></li>
-<li class="item"><span class="item-check"></span><div><div class="item-titulo">🧰 Caixa de ferramentas</div><div class="item-desc">Mecânico preparado resolve o serviço com mais agilidade.</div></div></li>
-<li class="item"><span class="item-check"></span><div><div class="item-titulo">🚗 Motor</div><div class="item-desc">Está cansado de trabalhar sem receber a manutenção correta.</div></div></li>
-<li class="item"><span class="item-check"></span><div><div class="item-titulo">🛞 Pneu</div><div class="item-desc">Calibragem e alinhamento fazem toda a diferença na segurança.</div></div></li>
-<li class="item"><span class="item-check"></span><div><div class="item-titulo">🛑 Pastilha de freio</div><div class="item-desc">Não dá para esperar o barulho aparecer para fazer a troca.</div></div></li>
-<li class="item"><span class="item-check"></span><div><div class="item-titulo">⚙️ Câmbio</div><div class="item-desc">Precisa de cuidado para continuar trocando as marchas suavemente.</div></div></li>
-<li class="item"><span class="item-check"></span><div><div class="item-titulo">🌡️ Radiador</div><div class="item-desc">Mantém o motor na temperatura certa e evita superaquecimento.</div></div></li>
-<li class="item"><span class="item-check"></span><div><div class="item-titulo">🔌 Vela de ignição</div><div class="item-desc">Uma pequena falha pode fazer o carro perder força.</div></div></li>
-<li class="item"><span class="item-check"></span><div><div class="item-titulo">🌀 Filtro de ar</div><div class="item-desc">Está cheio de sujeira e o motor não consegue respirar.</div></div></li>
-<li class="item"><span class="item-check"></span><div><div class="item-titulo">🎁 +6 Bônus Exclusivos</div><div class="item-desc">Ferramentas extras para divulgação e atendimento.</div></div></li>
-      </ul>
-    <div style="text-align:center;margin-top:32px;padding:20px;background:var(--verde-claro);border:1px solid var(--verde-medio);border-radius:12px;">
-      <p style="font-family:'Montserrat',sans-serif;font-weight:800;font-size:clamp(14px,2vw,17px);color:var(--preto);">Valor total: <span style="text-decoration:line-through;color:var(--cinza-texto);">R$393,00</span></p>
-      <p style="font-family:'Montserrat',sans-serif;font-weight:900;font-size:clamp(22px,4vw,32px);color:var(--verde);margin-top:4px;">Hoje só aqui: <strong>R$19,90</strong></p>
+<section class="section paper">
+  <div class="wrap">
+    <h2 class="h2">Tudo que você <span>recebe</span> no completo</h2>
+    <p class="sub">Vídeos e posts que trabalham como vendedores da sua oficina</p>
+    <div class="list">
+      <div class="item"><div class="ico">🎥</div><div><b>🎥 +50 Vídeos Divulga Serviços para Oficinas</b><span>Formatos prontos para Instagram, TikTok e WhatsApp.</span></div></div>
+      <div class="item"><div class="ico">🖼️</div><div><b>🖼️ +100 Posts Editáveis</b><span>Conteúdo visual pronto para usar hoje.</span></div></div>
+      <div class="item"><div class="ico">🛢️</div><div><b>🛢️ Óleo do motor</b><span>Avisando que está vencido → o cliente agenda a troca.</span></div></div>
+      <div class="item"><div class="ico">🔋</div><div><b>🔋 Bateria</b><span>Dizendo que vai deixar ele na mão → troca antes de ficar parado.</span></div></div>
+      <div class="item"><div class="ico">🔩</div><div><b>🔩 Parafuso frouxo</b><span>Reclamando do barulho → traz o carro para revisão.</span></div></div>
+      <div class="item"><div class="ico">🔧</div><div><b>🔧 Chave de boca</b><span>Pronta para resolver → sua oficina vira a primeira lembrança.</span></div></div>
+      <div class="item"><div class="ico">🎁</div><div><b>🎁 +6 Bônus Exclusivos</b><span>Ferramentas extras para divulgação e atendimento.</span></div></div>
+    </div>
+    <div class="valorbox">
+      <p style="font-weight:800">Valor total: <span style="text-decoration:line-through;color:var(--muted)">R$393,00</span></p>
+      <p style="font-family:'Barlow Condensed',sans-serif;font-size:32px;font-weight:800;color:var(--amber-deep);margin-top:4px">Hoje só aqui: R$19,90</p>
     </div>
   </div>
 </section>
 
-<section class="secao bg-cinza">
-  <div class="container">
-    <h2 class="secao-titulo">Quem Já Usa o <span class="destaque">Pacote Completo</span> Fala:</h2>
-    <div class="depo-destaque"><p class="depo-texto">"Postei o primeiro vídeo no mesmo dia que recebi. Em 2 dias já tinha clientes me chamando no WhatsApp para agendar revisão. Nunca tinha conseguido isso antes."</p><p class="depo-autor">— Carla, oficina mecânica, São Paulo/SP</p></div>
-    <div class="depo-destaque"><p class="depo-texto">"Os vídeos prontos salvaram meu tempo. Agora posto todo dia sem precisar criar nada e meu Instagram está crescendo com pessoas da minha cidade."</p><p class="depo-autor">— Marcos, auto center, Curitiba/PR</p></div>
-  </div>
-</section>
-
-<section class="secao bg-verde-claro">
-  <div class="container">
-    <div class="garantia-box">
-      <img src="Garantia.webp" alt="Garantia de 7 dias">
-      <h3>Risco Zero — 7 Dias de Garantia</h3>
-      <p>Se por qualquer motivo não ficar satisfeito, basta enviar um email e devolvemos 100% do seu dinheiro. Sem perguntas.</p>
+<section class="section">
+  <div class="wrap">
+    <div class="garantia">
+      <img src="img/garantia.webp" alt="Garantia de 7 dias">
+      <h3 style="font-size:26px;margin-bottom:8px">Risco zero — 7 dias</h3>
+      <p style="color:var(--muted);font-size:14px">Se por qualquer motivo não ficar satisfeito, basta enviar um email e devolvemos 100% do seu dinheiro. Sem perguntas.</p>
     </div>
   </div>
 </section>
 
-<div class="cta-final">
-  <div class="container">
-    <h2>Última Chance de Pegar o Pacote Completo por Este Preço</h2>
-    <p>Assim que você sair dessa página, essa oferta desaparece para sempre.</p>
-    <div class="timer-wrap">
-      <span class="timer-label">⏱️ Oferta expira em:</span>
-      <div class="timer">
-        <div class="timer-bloco"><div class="timer-num" id="t-min">15</div><div class="timer-sub">min</div></div>
-        <span class="timer-sep">:</span>
-        <div class="timer-bloco"><div class="timer-num" id="t-seg">00</div><div class="timer-sub">seg</div></div>
-      </div>
+<div class="cta">
+  <div class="wrap">
+    <h2>Última chance do Pacote Completo neste preço</h2>
+    <p>Assim que você sair, essa oferta desaparece.</p>
+    <div class="timer">
+      <div class="box"><div class="n" id="t-min">15</div><div class="l">min</div></div>
+      <span style="color:var(--amber);font-size:22px;font-weight:800">:</span>
+      <div class="box"><div class="n" id="t-seg">00</div><div class="l">seg</div></div>
     </div>
-    <div class="preco-mini"><p class="de">De R$27,90</p><div class="valor"><sup>R$</sup>19,90</div></div>
-    <a href="https://pay.kirvano.com/5a405eb5-7e64-455b-b52b-617a6cc97d07" class="btn-sim-final">✅ SIM! QUERO O PACOTE COMPLETO POR R$19,90</a>
-    <a href="https://pay.kirvano.com/ddaf5eca-2485-4e56-bfca-6d3620744aff" class="btn-nao-final">Não, prefiro ficar só com o básico de R$10</a>
+    <p class="de" style="text-decoration:line-through;color:#8FA0B0;margin-bottom:2px">De R$27,90</p>
+    <div style="font-family:'Barlow Condensed',sans-serif;font-size:56px;font-weight:800;color:var(--amber);line-height:1;margin-bottom:16px">R$19,90</div>
+    <a href="https://pay.kirvano.com/5a405eb5-7e64-455b-b52b-617a6cc97d07" class="btn">✅ Sim! Quero o pacote completo por R$19,90</a>
+    <a href="https://pay.kirvano.com/ddaf5eca-2485-4e56-bfca-6d3620744aff" class="btn-no">Não, prefiro ficar só com o básico de R$10</a>
   </div>
 </div>
 
 <footer>
-  <p style="margin-bottom:6px;"><a href="https://trafego6em7.com/politica-de-privacidade" target="_blank" rel="noopener">Política de Privacidade</a> &nbsp;|&nbsp; <a href="https://trafego6em7.com/termos-de-uso/" target="_blank" rel="noopener">Termos de Uso</a></p>
+  <p style="margin-bottom:6px"><a href="https://trafego6em7.com/politica-de-privacidade" target="_blank" rel="noopener">Política de Privacidade</a> · <a href="https://trafego6em7.com/termos-de-uso/" target="_blank" rel="noopener">Termos de Uso</a></p>
   <p>© 2026 — Todos os direitos reservados.</p>
 </footer>
 <script>
